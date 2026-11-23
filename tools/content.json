@@ -1,0 +1,2071 @@
+{
+ "5": {
+  "num": 5,
+  "opener": {
+   "code": "MHH-MEJ-ZZ-ZZ-M3-Z-0001",
+   "title": "Mental Health Hospital",
+   "tags": "Healthcare \u00b7 Federation \u00b7 Clash detection \u00b7 Issue management \u00b7 CDE",
+   "overview": "A single storey mental health unit with a basement, walkway and plant roof in New South Wales, supplied as a training dataset of seven discipline models. I took the set from unloaded links with broken paths to an ISO 19650 named federation, ran a ten test clash matrix over four runs, and closed with 94 owned issues, two RFIs to the engineers, a BCF package, a coordinated services sheet and a shared package in Autodesk Construction Cloud.",
+   "facts": [
+    [
+     "Software",
+     "Revit 2027 \u00b7 Navisworks Manage 2027 \u00b7 Autodesk Construction Cloud \u00b7 Excel \u00b7 BCF 2.1"
+    ],
+    [
+     "Location",
+     "New South Wales, Australia. Training dataset, not a live commission."
+    ],
+    [
+     "My role",
+     "BIM coordinator: model setup and naming, federation, clash matrix, triage, issue log, RFIs, CDE workflow"
+    ]
+   ],
+   "figures": [
+    [
+     "7",
+     "discipline models"
+    ],
+    [
+     "10",
+     "clash tests"
+    ],
+    [
+     "1,123",
+     "raw clashes, Run 1"
+    ],
+    [
+     "430",
+     "live clashes, Run 4"
+    ],
+    [
+     "94",
+     "owned issues"
+    ],
+    [
+     "2",
+     "RFIs to engineers"
+    ]
+   ],
+   "imgs": [
+    "mhh_render0.jpg",
+    "mhh_render1.jpg"
+   ],
+   "idx": "01"
+  }
+ },
+ "6": {
+  "num": 6,
+  "hdr_l": "<b>MHH</b>&nbsp;&nbsp;Mental Health Hospital&nbsp;&nbsp;\u00b7&nbsp;&nbsp;Coordination 1 of 7",
+  "hdr_r": "MHH-MEJ-ZZ-ZZ-M3-Z-0001.nwf&nbsp;&nbsp;\u00b7&nbsp;&nbsp;21 Nov 2026",
+  "items": [
+   {
+    "t": "left",
+    "kicker": "Model federation",
+    "h1": "Federation of seven discipline models under ISO 19650 naming",
+    "hero": "<span class=\"n\">7</span><span class=\"arr\">\u2192</span><span class=\"n\">1</span>",
+    "herocap": "discipline models federated on one origin into <span class='mono'>MHH-MEJ-ZZ-ZZ-M3-Z-0001.nwf</span>",
+    "qs": [
+     {
+      "title": "What was wrong",
+      "p": "The dataset arrived as a workshared architectural host with seven unloaded links, each pointing at an absolute path on someone else's computer, under course file names that said nothing about discipline or status.",
+      "extra": ""
+     },
+     {
+      "title": "What I decided",
+      "p": "Work on copies and never overwrite received information. Each model was saved as a compacted copy under an ISO 19650 container name with role codes A, S, M, E, F and P, and every link was repointed. Before federating I checked placement: all links sit at the host origin with zero rotation, and Basement 64.90, Ground 70.00, Ceiling 72.70, Walkway 73.40 and Roof 77.00 match in every model.",
+      "extra": ""
+     },
+     {
+      "title": "What changed",
+      "p": "Seven NWC caches named to the same convention, so every object in Navisworks traces back to its Revit source. The first pass came out light: the electrical cache was 0.2 MB with 1,374 light fittings in the model, because the export view had 30 categories switched off. Caught, fixed and re-exported before any clash test ran.",
+      "extra": ""
+     },
+     {
+      "title": "What I would do next",
+      "p": "Move the set to shared coordinates from the survey point before it leaves the training environment. Origin to origin only holds while every author starts at the same point.",
+      "extra": ""
+     }
+    ],
+    "role": [
+     [
+      "Model source",
+      "NSW healthcare training dataset (BIM Accelerator), 7 discipline models"
+     ],
+     [
+      "My role",
+      "BIM coordination: setup, federation, clash tests, triage, issues, RFIs, CDE"
+     ],
+     [
+      "Tools",
+      "Revit 2027, Navisworks Manage 2027, Autodesk Construction Cloud, Excel, BCF 2.1"
+     ]
+    ]
+   },
+   {
+    "t": "fig",
+    "x": 113.75000000000001,
+    "y": 30,
+    "w": 192.5,
+    "src": "mhh01x.jpg",
+    "caps": [
+     [
+      1,
+      "The federated set exploded by discipline layer, all seven models aligned on one origin."
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "box",
+    "x": 113.75000000000001,
+    "y": 172,
+    "w": 159.58333333333334,
+    "html": "<div class=\"sec\">Container names, <span class=\"mono\">MHH-MEJ-ZZ-ZZ-M3-</span>\u2026</div><table class=\"dt\"><tr><th class=\"\">Code</th><th class=\"\">Discipline</th><th class=\"\">Content loaded</th><th class=\"r\">NWC MB</th></tr><tr class=\"\"><td class=\"\"><span class='mono'>A-0001</span></td><td class=\"\">Architecture, host</td><td class=\"\">1,064 walls, 181 doors, 66 rooms</td><td class=\"r\">1.3</td></tr><tr class=\"\"><td class=\"\"><span class='mono'>S-0001</span></td><td class=\"\">Structure</td><td class=\"\">4,329 beams, 743 columns, 35 floors</td><td class=\"r\">5.4</td></tr><tr class=\"\"><td class=\"\"><span class='mono'>M-0001</span></td><td class=\"\">Mechanical</td><td class=\"\">1,005 ducts, 1,057 duct fittings, 1,589 pipes</td><td class=\"r\">10.1</td></tr><tr class=\"\"><td class=\"\"><span class='mono'>E-0001</span></td><td class=\"\">Electrical</td><td class=\"\">143 cable trays, 63 conduits, 1,374 light fittings</td><td class=\"r\">0.6</td></tr><tr class=\"\"><td class=\"\"><span class='mono'>F-0001</span></td><td class=\"\">Fire services</td><td class=\"\">1,006 sprinklers, 402 pipes</td><td class=\"r\">0.5</td></tr><tr class=\"\"><td class=\"\"><span class='mono'>P-0001</span></td><td class=\"\">Drainage</td><td class=\"\">1,879 pipes</td><td class=\"r\">1.2</td></tr><tr class=\"\"><td class=\"\"><span class='mono'>P-0002</span></td><td class=\"\">Water reticulation</td><td class=\"\">1,536 pipes, 11 units</td><td class=\"r\">0.8</td></tr></table>",
+    "cls": ""
+   },
+   {
+    "t": "fig",
+    "x": 311.25000000000006,
+    "y": 30,
+    "w": 93.75,
+    "src": "mhh00links.jpg",
+    "caps": [
+     [
+      2,
+      "Navisworks Append: the seven NWC caches, each named to the container convention."
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "box",
+    "x": 311.25000000000006,
+    "y": 104,
+    "w": 93.75,
+    "html": "<div class=\"sec\">Role codes</div><p style=\"font-size:8pt\">A architect, S structural, M mechanical, E electrical, P hydraulic (drainage and water). F for fire services is a project specific code. AS ISO 19650, as adopted in Australia, leaves role codes to each project, so the full list is set in the BEP.</p><div class=\"sec\" style=\"margin-top:4mm\">Export settings</div><p style=\"font-size:8pt\">Internal coordinates, element IDs on, element properties converted, file divided into levels.</p>",
+    "cls": "card"
+   }
+  ]
+ },
+ "7": {
+  "num": 7,
+  "hdr_l": "<b>MHH</b>&nbsp;&nbsp;Mental Health Hospital&nbsp;&nbsp;\u00b7&nbsp;&nbsp;Coordination 2 of 7",
+  "hdr_r": "MHH-MEJ-ZZ-ZZ-M3-Z-0001.nwf&nbsp;&nbsp;\u00b7&nbsp;&nbsp;Run 1&nbsp;&nbsp;\u00b7&nbsp;&nbsp;21 Nov 2026",
+  "items": [
+   {
+    "t": "left",
+    "kicker": "Clash test matrix",
+    "h1": "Ten clash tests set by discipline pair and services precedence",
+    "hero": "<span class=\"n\">1,123</span>",
+    "herocap": "raw clashes from Run 1, before any triage",
+    "qs": [
+     {
+      "title": "What was wrong",
+      "p": "A catch all MEP v MEP test floods results with duplicates and gives every clash two possible owners, so nobody acts.",
+      "extra": ""
+     },
+     {
+      "title": "What I decided",
+      "p": "One discipline pair per test, so each clash lands with one owner. Precedence runs structure first, then gravity drainage because falls fix its route, then large ductwork, pressure pipework, sprinklers and finally containment. Tolerance follows the trade: 25 mm for duct against steel, 15 mm for pipework, 10 mm at the ceiling, and a 50 mm clearance test for trays near water. Light fittings were left out of the ceiling test because recessed lights sit in the ceiling by design.",
+      "extra": ""
+     },
+     {
+      "title": "What changed",
+      "p": "Run 1 returned 1,123 clashes, and 836 of them (75 percent) sat in the three structure tests. That pattern pointed at the selection sets rather than the design, which the next page unpicks. A zero in T05 was tested before it was trusted: temporary copies at 0 mm hard and 50 mm clearance returned 0 and 1, so the zero is real.",
+      "extra": ""
+     },
+     {
+      "title": "What I would do next",
+      "p": "T10, structure against trays, was added after the Run 2 review exposed a gap. On the next project it goes into the matrix from day one.",
+      "extra": ""
+     }
+    ],
+    "role": [
+     [
+      "Model source",
+      "NSW healthcare training dataset (BIM Accelerator), 7 discipline models"
+     ],
+     [
+      "My role",
+      "BIM coordination: setup, federation, clash tests, triage, issues, RFIs, CDE"
+     ],
+     [
+      "Tools",
+      "Revit 2027, Navisworks Manage 2027, Autodesk Construction Cloud, Excel, BCF 2.1"
+     ]
+    ]
+   },
+   {
+    "t": "box",
+    "x": 113.75000000000001,
+    "y": 30,
+    "w": 291.25,
+    "html": "<div class=\"sec\">Clash matrix and Run 1 results, 21 Nov 2026</div><table class=\"dt\"><tr><th class=\"\">Test</th><th class=\"\">Selection A</th><th class=\"\">Selection B</th><th class=\"\">Type</th><th class=\"r\">Tol. mm</th><th class=\"r\">Run 1</th><th class=\"\"></th></tr><tr class=\"\"><td class=\"\"><span class='mono'>T01</span></td><td class=\"\">Structure</td><td class=\"\">Ductwork and fittings</td><td class=\"\">Hard</td><td class=\"r\">25</td><td class=\"r\">126</td><td class=\"\"><span class=\"bar a\" style=\"width:10.5mm\"></span></td></tr><tr class=\"\"><td class=\"\"><span class='mono'>T02</span></td><td class=\"\">Structure</td><td class=\"\">Pipework, M and P models</td><td class=\"\">Hard</td><td class=\"r\">15</td><td class=\"r\">539</td><td class=\"\"><span class=\"bar a\" style=\"width:45.0mm\"></span></td></tr><tr class=\"\"><td class=\"\"><span class='mono'>T03</span></td><td class=\"\">Structure</td><td class=\"\">Sprinkler pipes and heads</td><td class=\"\">Hard</td><td class=\"r\">15</td><td class=\"r\">154</td><td class=\"\"><span class=\"bar a\" style=\"width:12.9mm\"></span></td></tr><tr class=\"\"><td class=\"\"><span class='mono'>T04</span></td><td class=\"\">Drainage</td><td class=\"\">Ducts, pressure pipes, trays</td><td class=\"\">Hard</td><td class=\"r\">15</td><td class=\"r\">17</td><td class=\"\"><span class=\"bar\" style=\"width:1.4mm\"></span></td></tr><tr class=\"\"><td class=\"\"><span class='mono'>T05</span></td><td class=\"\">Ductwork</td><td class=\"\">Pressure pipework</td><td class=\"\">Hard</td><td class=\"r\">15</td><td class=\"r\">0</td><td class=\"\"><span class=\"bar\" style=\"width:0.0mm\"></span></td></tr><tr class=\"\"><td class=\"\"><span class='mono'>T06</span></td><td class=\"\">Ductwork</td><td class=\"\">Sprinkler pipework</td><td class=\"\">Hard</td><td class=\"r\">15</td><td class=\"r\">4</td><td class=\"\"><span class=\"bar\" style=\"width:0.4mm\"></span></td></tr><tr class=\"\"><td class=\"\"><span class='mono'>T07</span></td><td class=\"\">Ductwork</td><td class=\"\">Cable trays and conduit</td><td class=\"\">Hard</td><td class=\"r\">15</td><td class=\"r\">43</td><td class=\"\"><span class=\"bar\" style=\"width:3.6mm\"></span></td></tr><tr class=\"\"><td class=\"\"><span class='mono'>T08</span></td><td class=\"\">Ceilings</td><td class=\"\">Ducts, pipes, drainage, sprinklers, trays</td><td class=\"\">Hard</td><td class=\"r\">10</td><td class=\"r\">175</td><td class=\"\"><span class=\"bar\" style=\"width:14.6mm\"></span></td></tr><tr class=\"\"><td class=\"\"><span class='mono'>T09</span></td><td class=\"\">Cable trays</td><td class=\"\">Water pipework</td><td class=\"\">Clearance</td><td class=\"r\">50</td><td class=\"r\">65</td><td class=\"\"><span class=\"bar\" style=\"width:5.4mm\"></span></td></tr><tr class=\"\"><td class=\"\"><span class='mono'>T10</span></td><td class=\"\">Structure</td><td class=\"\">Cable trays, added after Run 2</td><td class=\"\">Hard</td><td class=\"r\">15</td><td class=\"r\">added</td><td class=\"\"><span class=\"bar\" style=\"width:0.0mm\"></span></td></tr><tr class=\"t\"><td class=\"\"></td><td class=\"\"></td><td class=\"\"></td><td class=\"\"></td><td class=\"r\">Total</td><td class=\"r\">1,123</td><td class=\"\"></td></tr></table>",
+    "cls": ""
+   },
+   {
+    "t": "fig",
+    "x": 113.75000000000001,
+    "y": 128,
+    "w": 159.58333333333334,
+    "src": "mhh01sets.jpg",
+    "caps": [
+     [
+      1,
+      "Search sets in Navisworks: DUCT, PIPE-PRESS, TRAY and CEIL update when the NWC caches refresh."
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "fig",
+    "x": 278.33333333333337,
+    "y": 128,
+    "w": 126.66666666666667,
+    "src": "mhh03.jpg",
+    "caps": [
+     [
+      2,
+      "Clash Detective after Run 1: nine tests, 1,123 raw clashes."
+     ]
+    ],
+    "marks": []
+   }
+  ]
+ },
+ "8": {
+  "num": 8,
+  "hdr_l": "<b>MHH</b>&nbsp;&nbsp;Mental Health Hospital&nbsp;&nbsp;\u00b7&nbsp;&nbsp;Coordination 3 of 7",
+  "hdr_r": "MHH-MEJ-ZZ-ZZ-M3-Z-0001.nwf&nbsp;&nbsp;\u00b7&nbsp;&nbsp;Runs 1 and 2&nbsp;&nbsp;\u00b7&nbsp;&nbsp;21 to 22 Nov 2026",
+  "items": [
+   {
+    "t": "left",
+    "kicker": "Clash filtering",
+    "h1": "Removal of false clashes from the first clash run",
+    "hero": "<span class=\"n\">1,123</span><span class=\"arr\">\u2192</span><span class=\"n\">370</span>",
+    "herocap": "raw clashes in Run 1, live clashes after the selection sets were rebuilt",
+    "qs": [
+     {
+      "title": "What was wrong",
+      "p": "75 percent of Run 1 sat in the structure tests, and T02 alone reported 539. Numbers that lopsided usually mean the selection is wrong, not the design.",
+      "extra": ""
+     },
+     {
+      "title": "What I decided",
+      "p": "Interrogate the results by category before touching any geometry. The whole file sets for structure, drainage and sprinklers had pulled in Revit room volumes (119 clashes in T02 and 119 in T03), 361 slab sleeves and 76 wall penetrations designed to sit inside the slab, plus analytical panels, topography and masses. Not one sprinkler clashed with structure. I rebuilt STR, DRAIN and SPRK to physical categories only and kept the originals as WholeFile_Run1 sets for the audit trail. Nothing was hidden or approved to make the number fall.",
+      "extra": ""
+     },
+     {
+      "title": "What changed",
+      "p": "T02 fell from 539 to 1, T03 from 154 to 0 and T04 from 17 to 0. Run 2 held 370 live clashes, grouped into 138 issues: an 88 percent reduction from Run 1, with every removal explained.",
+      "extra": ""
+     },
+     {
+      "title": "What I would do next",
+      "p": "Make the physical category rule part of the search set template, so the next federation starts at Run 2 quality.",
+      "extra": ""
+     }
+    ],
+    "role": [
+     [
+      "Model source",
+      "NSW healthcare training dataset (BIM Accelerator), 7 discipline models"
+     ],
+     [
+      "My role",
+      "BIM coordination: setup, federation, clash tests, triage, issues, RFIs, CDE"
+     ],
+     [
+      "Tools",
+      "Revit 2027, Navisworks Manage 2027, Autodesk Construction Cloud, Excel, BCF 2.1"
+     ]
+    ]
+   },
+   {
+    "t": "fig",
+    "x": 113.75000000000001,
+    "y": 30,
+    "w": 143.125,
+    "src": "mhh06a.jpg",
+    "caps": [
+     [
+      1,
+      "Noise class one: a Revit room volume (green) reported as a clash with structure."
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "fig",
+    "x": 261.875,
+    "y": 30,
+    "w": 143.125,
+    "src": "mhh06b.jpg",
+    "caps": [
+     [
+      2,
+      "Noise class two: a slab sleeve, a provision designed to sit inside the slab."
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "box",
+    "x": 113.75000000000001,
+    "y": 140,
+    "w": 192.5,
+    "html": "<div class=\"sec\">Run 1 against Run 2, by test</div><table class=\"dt\"><tr><th class=\"\">Test</th><th class=\"r\">Run 1</th><th class=\"r\">Run 2</th><th class=\"\"></th><th class=\"\">Removed because</th></tr><tr class=\"\"><td class=\"\"><span class='mono'>T01 STR v DUCT</span></td><td class=\"r\">126</td><td class=\"r\">121</td><td class=\"\"><span class=\"bar\" style=\"width:7.0mm\"></span><br><span class=\"bar a\" style=\"width:6.7mm\"></span></td><td class=\"\"></td></tr><tr class=\"\"><td class=\"\"><span class='mono'>T02 STR v PIPE</span></td><td class=\"r\">539</td><td class=\"r\">1</td><td class=\"\"><span class=\"bar\" style=\"width:30.0mm\"></span><br><span class=\"bar a\" style=\"width:0.4mm\"></span></td><td class=\"\">Room volumes and slab sleeves</td></tr><tr class=\"\"><td class=\"\"><span class='mono'>T03 STR v SPRK</span></td><td class=\"r\">154</td><td class=\"r\">0</td><td class=\"\"><span class=\"bar\" style=\"width:8.6mm\"></span><br><span class=\"bar a\" style=\"width:0.0mm\"></span></td><td class=\"\">Rooms, alarm devices, masses</td></tr><tr class=\"\"><td class=\"\"><span class='mono'>T04 DRAIN v SERV</span></td><td class=\"r\">17</td><td class=\"r\">0</td><td class=\"\"><span class=\"bar\" style=\"width:0.9mm\"></span><br><span class=\"bar a\" style=\"width:0.0mm\"></span></td><td class=\"\">Sleeves and penetrations</td></tr><tr class=\"\"><td class=\"\"><span class='mono'>T05 DUCT v PIPE</span></td><td class=\"r\">0</td><td class=\"r\">0</td><td class=\"\"><span class=\"bar\" style=\"width:0.0mm\"></span><br><span class=\"bar a\" style=\"width:0.0mm\"></span></td><td class=\"\">Zero verified</td></tr><tr class=\"\"><td class=\"\"><span class='mono'>T06 DUCT v SPRK</span></td><td class=\"r\">4</td><td class=\"r\">0</td><td class=\"\"><span class=\"bar\" style=\"width:0.4mm\"></span><br><span class=\"bar a\" style=\"width:0.0mm\"></span></td><td class=\"\"></td></tr><tr class=\"\"><td class=\"\"><span class='mono'>T07 DUCT v TRAY</span></td><td class=\"r\">43</td><td class=\"r\">43</td><td class=\"\"><span class=\"bar\" style=\"width:2.4mm\"></span><br><span class=\"bar a\" style=\"width:2.4mm\"></span></td><td class=\"\"></td></tr><tr class=\"\"><td class=\"\"><span class='mono'>T08 CEIL v SERV</span></td><td class=\"r\">175</td><td class=\"r\">175</td><td class=\"\"><span class=\"bar\" style=\"width:9.7mm\"></span><br><span class=\"bar a\" style=\"width:9.7mm\"></span></td><td class=\"\"></td></tr><tr class=\"\"><td class=\"\"><span class='mono'>T09 TRAY v WATER</span></td><td class=\"r\">65</td><td class=\"r\">30</td><td class=\"\"><span class=\"bar\" style=\"width:3.6mm\"></span><br><span class=\"bar a\" style=\"width:1.7mm\"></span></td><td class=\"\"></td></tr><tr class=\"t\"><td class=\"\">Total</td><td class=\"r\">1,123</td><td class=\"r\">370</td><td class=\"\"></td><td class=\"\">88 percent fewer issues after grouping</td></tr></table>",
+    "cls": ""
+   },
+   {
+    "t": "fig",
+    "x": 311.25000000000006,
+    "y": 140,
+    "w": 93.75,
+    "src": "mhh08.jpg",
+    "caps": [
+     [
+      3,
+      "The rebuilt sets, with the WholeFile_Run1 originals kept for audit."
+     ]
+    ],
+    "marks": []
+   }
+  ]
+ },
+ "10": {
+  "num": 10,
+  "hdr_l": "<b>MHH</b>&nbsp;&nbsp;Mental Health Hospital&nbsp;&nbsp;\u00b7&nbsp;&nbsp;Coordination 5 of 7",
+  "hdr_r": "MHH-MEJ-ZZ-ZZ-M3-Z-0001.nwf&nbsp;&nbsp;\u00b7&nbsp;&nbsp;Run 4&nbsp;&nbsp;\u00b7&nbsp;&nbsp;22 to 23 Nov 2026",
+  "items": [
+   {
+    "t": "left",
+    "kicker": "Issues and RFIs",
+    "h1": "121 duct clashes classified into four issue types with owners",
+    "hero": "<span class=\"n\">121</span><span class=\"arr\">\u2192</span><span class=\"n\">4</span>",
+    "herocap": "T01 structure v duct clashes, split into owner classes",
+    "qs": [
+     {
+      "title": "What was wrong",
+      "p": "T01 looked like one problem, ducts through beams. Sent that way, all 121 would have gone to the structural engineer, who would have returned most of them.",
+      "extra": ""
+     },
+     {
+      "title": "What I decided",
+      "p": "Break T01 down by steel member, duct size and system. Roof and deck openings are intentional, so the architect confirms upstands. A duct deeper than its beam cannot pass through it, so mechanical drops or reroutes. Bracing and posts cannot be penetrated. Only ten small ducts, under roughly 60 percent of beam depth, went to structural as web opening candidates, with that rule of thumb stated and the real limit left to the engineer.",
+      "extra": ""
+     },
+     {
+      "title": "What changed",
+      "p": "Structural receives 10 clashes in RFI 001 instead of 121. RFI 002 asks the electrical engineer to choose a tray route through the ceiling void, settling 69 linked issues with one answer. The single T02 clash turned out to be a sanitary riser fitting 20 mm into a 100 mm slab: an alignment fix for the drainage modeller, not a structural question.",
+      "extra": ""
+     },
+     {
+      "title": "What I would do next",
+      "p": "When RFI 001 returns opening sizes, model the openings in the structural model and rerun T01 to confirm all ten close.",
+      "extra": ""
+     }
+    ],
+    "role": [
+     [
+      "Model source",
+      "NSW healthcare training dataset (BIM Accelerator), 7 discipline models"
+     ],
+     [
+      "My role",
+      "BIM coordination: setup, federation, clash tests, triage, issues, RFIs, CDE"
+     ],
+     [
+      "Tools",
+      "Revit 2027, Navisworks Manage 2027, Autodesk Construction Cloud, Excel, BCF 2.1"
+     ]
+    ]
+   },
+   {
+    "t": "box",
+    "x": 113.75000000000001,
+    "y": 30,
+    "w": 192.5,
+    "html": "<div class=\"sec\">T01 STR v DUCT, classified by who must act</div><table class=\"dt\"><tr><th class=\"\">Class</th><th class=\"r\">Clashes</th><th class=\"\">Members</th><th class=\"\">Owner and action</th></tr><tr class=\"\"><td class=\"\">Roof and walkway deck penetrations</td><td class=\"r\">15</td><td class=\"\">Roof 1, walkway floor</td><td class=\"\">Architect: confirm openings, upstands and flashings. Intentional.</td></tr><tr class=\"\"><td class=\"\">Web opening candidates</td><td class=\"r\">10</td><td class=\"\">460UB67, 410UB54, 360UB51, 310UB40</td><td class=\"\">Structural: RFI 001</td></tr><tr class=\"\"><td class=\"\">Ducts deeper than the beam they cross</td><td class=\"r\">50</td><td class=\"\">310UB40, 310UB46, 360UB51, 180PFC, 250UB26</td><td class=\"\">Mechanical: drop below the soffit or reroute</td></tr><tr class=\"\"><td class=\"\">Secondary steel</td><td class=\"r\">46</td><td class=\"\">75EA6 bracing, SHS posts, 200Z15 purlins</td><td class=\"\">Mechanical reroute; bracing query in RFI 001</td></tr><tr class=\"t\"><td class=\"\">Total</td><td class=\"r\">121</td><td class=\"\"></td><td class=\"\">4 owners, 1 RFI</td></tr></table>",
+    "cls": ""
+   },
+   {
+    "t": "fig",
+    "x": 311.25000000000006,
+    "y": 30,
+    "w": 93.75,
+    "src": "mhh17.jpg",
+    "caps": [
+     [
+      1,
+      "T02 Clash532: the sanitary riser fitting (red) rising into the slab, viewed from below through a transparent slab."
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "fig",
+    "x": 113.75000000000001,
+    "y": 104,
+    "w": 192.5,
+    "src": "mhh14b.jpg",
+    "caps": [
+     [
+      2,
+      "Clash report cards for the T01 owner classes: count, median and maximum penetration, level, both elements, owner."
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "box",
+    "x": 311.25000000000006,
+    "y": 104,
+    "w": 93.75,
+    "html": "<div class=\"lab\">RFI extract</div><div class=\"id mono\">MHH-RFI-002</div>\n<div class=\"tags\"><span class=\"tag\">ELECTRICAL</span><span class=\"tag\">69 ISSUES</span><span class=\"tag\">DRAFT</span></div>\n<p>78 cable tray elements sit inside the 200 mm ceiling zone above seven ceiling areas, with up to 135 mm overlap. A trial lift cleared the ceiling and drove the trays into steel, so the void cannot hold the trays on their current route and width.</p>\n<p><b>Question.</b> Confirm one option, or propose another:</p>\n<ol style=\"font-size:8.3pt;margin:0 0 2.5mm 4.5mm\"><li>Reroute the main runs parallel to the primary beams.</li><li>Reduce widths or split runs to fit below the soffits.</li><li>Accept local drops into a raised bulkhead, Architect to confirm ceiling heights.</li></ol>\n<dl><dt>To</dt><dd>Electrical; copy Structural, Architect</dd><dt>Due</dt><dd class=\"mono\">2026-11-29</dd><dt>If held</dt><dd>78 ceiling clashes stay open and the ceiling cannot be set out.</dd></dl>",
+    "cls": "card"
+   }
+  ]
+ },
+ "11": {
+  "num": 11,
+  "hdr_l": "<b>MHH</b>&nbsp;&nbsp;Mental Health Hospital&nbsp;&nbsp;\u00b7&nbsp;&nbsp;Coordination 6 of 7",
+  "hdr_r": "MHH-MEJ-ZZ-ZZ-M3-Z-0001.nwf&nbsp;&nbsp;\u00b7&nbsp;&nbsp;Runs 2 to 4&nbsp;&nbsp;\u00b7&nbsp;&nbsp;22 Nov 2026",
+  "items": [
+   {
+    "t": "left",
+    "kicker": "Run history and reporting",
+    "h1": "Run comparison and coordination reporting",
+    "hero": "<span class=\"n\" style=\"color:var(--green)\">\u221278</span><span class=\"n\" style=\"color:var(--red)\">+104</span>",
+    "herocap": "clashes cleared and created by the Run 3 tray lift",
+    "qs": [
+     {
+      "title": "What was wrong",
+      "p": "In Run 3 the electrical trays were lifted 150 to 250 mm to clear the ceiling zone, and T08 fell by 78. Checked against T08 alone, it looked like a fix.",
+      "extra": ""
+     },
+     {
+      "title": "What I decided",
+      "p": "Every geometric change is rerun against the whole matrix before it is accepted. The rerun showed 78 trays driven into steel beams in T10, up to 477 mm deep, and 26 into ductwork in T07. The void between ceiling and beam soffit cannot hold the trays at their width and route, so it is a design decision for the electrical engineer, not a modeller's move. I restored the Run 2 electrical model, checked byte for byte with cmp, re-exported and raised RFI 002.",
+      "extra": ""
+     },
+     {
+      "title": "What changed",
+      "p": "Run 4 matched the Run 2 baseline on every test, 430 live clashes, with the lifted model archived for the record. Reporting went out as a custom HTML report with one card per issue group, an issue log with live summary formulas, a BCF 2.1 package of 94 topics (284 XML files, all parsing cleanly) and a coordinated services sheet framing both RFI zones.",
+      "extra": ""
+     },
+     {
+      "title": "What I would do next",
+      "p": "A services zone study drawn as sections (ceiling level, beam soffit, duct zone) before any tray moves again.",
+      "extra": ""
+     }
+    ],
+    "role": [
+     [
+      "Model source",
+      "NSW healthcare training dataset (BIM Accelerator), 7 discipline models"
+     ],
+     [
+      "My role",
+      "BIM coordination: setup, federation, clash tests, triage, issues, RFIs, CDE"
+     ],
+     [
+      "Tools",
+      "Revit 2027, Navisworks Manage 2027, Autodesk Construction Cloud, Excel, BCF 2.1"
+     ]
+    ]
+   },
+   {
+    "t": "box",
+    "x": 113.75000000000001,
+    "y": 30,
+    "w": 126.66666666666667,
+    "html": "<div class=\"sec\">Live clashes by run, tests that moved</div><table class=\"dt\"><tr><th class=\"\">Test</th><th class=\"r\">Run 2</th><th class=\"r\">Run 3</th><th class=\"r\">Run 4</th></tr><tr class=\"\"><td class=\"\"><span class='mono'>T01 STR v DUCT</span></td><td class=\"r\">121</td><td class=\"r\">121</td><td class=\"r\">121</td></tr><tr class=\"\"><td class=\"\"><span class='mono'>T02 STR v PIPE</span></td><td class=\"r\">1</td><td class=\"r\">1</td><td class=\"r\">1</td></tr><tr class=\"\"><td class=\"\"><span class='mono'>T07 DUCT v TRAY</span></td><td class=\"r\">43</td><td class=\"r\"><b style='color:var(--red)'>69</b></td><td class=\"r\">43</td></tr><tr class=\"\"><td class=\"\"><span class='mono'>T08 CEIL v SERV</span></td><td class=\"r\">175</td><td class=\"r\"><b style='color:var(--green)'>97</b></td><td class=\"r\">175</td></tr><tr class=\"\"><td class=\"\"><span class='mono'>T09 TRAY v WATER</span></td><td class=\"r\">30</td><td class=\"r\"><b style='color:var(--green)'>20</b></td><td class=\"r\">30</td></tr><tr class=\"\"><td class=\"\"><span class='mono'>T10 STR v TRAY</span></td><td class=\"r\">60</td><td class=\"r\"><b style='color:var(--red)'>133</b></td><td class=\"r\">60</td></tr><tr class=\"t\"><td class=\"\">Total live</td><td class=\"r\">430</td><td class=\"r\">441</td><td class=\"r\">430</td></tr></table><div class=\"pull\" style=\"margin-top:6mm\">A fix verified against one test only is not a fix.</div>",
+    "cls": ""
+   },
+   {
+    "t": "fig",
+    "x": 245.41666666666669,
+    "y": 30,
+    "w": 159.58333333333334,
+    "src": "mhh13.jpg",
+    "caps": [
+     [
+      1,
+      "T08 after the revert: 22 groups, 16 New and 6 Active, back at the Run 2 baseline."
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "fig",
+    "x": 113.75000000000001,
+    "y": 140,
+    "w": 291.25,
+    "src": "s5001.jpg",
+    "caps": [
+     [
+      2,
+      "Coordinated services sheet <span class='mono'>MHH-MEJ-XX-ZZ-DR-Z-5001</span>: section boxed 3D views of the RFI 002 ceiling void (left) and the RFI 001 web openings (right). Title block withheld, as it belongs to the course dataset."
+     ]
+    ],
+    "marks": []
+   }
+  ]
+ },
+ "12": {
+  "num": 12,
+  "hdr_l": "<b>MHH</b>&nbsp;&nbsp;Mental Health Hospital&nbsp;&nbsp;\u00b7&nbsp;&nbsp;Coordination 7 of 7",
+  "hdr_r": "Autodesk Construction Cloud&nbsp;&nbsp;\u00b7&nbsp;&nbsp;23 Nov 2026",
+  "items": [
+   {
+    "t": "left",
+    "kicker": "Common data environment",
+    "h1": "ISO 19650 workflow in Autodesk Construction Cloud",
+    "hero": "<span class=\"n\" style=\"font-size:30pt\">WIP</span><span class=\"arr\">\u2192</span><span class=\"n\" style=\"font-size:30pt\">SHARED</span>",
+    "herocap": "ISO 19650 information states in Autodesk Construction Cloud, captured 23 Nov 2026",
+    "qs": [
+     {
+      "title": "What was wrong",
+      "p": "Coordination files on one laptop have no status, no permissions and no audit trail. ISO 19650 expects a common data environment where information moves through WIP, Shared and Published states.",
+      "extra": ""
+     },
+     {
+      "title": "What I decided",
+      "p": "Move the models to the cloud with Collaborate in the cloud, into discipline WIP folders. Apply the ISO 19650 naming template, set folder permissions so each team can only create in its own WIP folder, then let Design Collaboration discover the folders as teams and set up a coordination space with clash detection on.",
+      "extra": ""
+     },
+     {
+      "title": "What changed",
+      "p": "Architectural, Mechanical and Structural run as teams. The architectural model was published as package Architectural (1), for consumption, and shared with every team. The timeline records the exchange, and the Shared folder now holds version 1 of the architectural model.",
+      "extra": ""
+     },
+     {
+      "title": "What I would do next",
+      "p": "Add a one step review and approval so a shared package can move to Published with an A suitability code, and raise the RFI items as ACC Issues pinned to the model.",
+      "extra": ""
+     }
+    ],
+    "role": [
+     [
+      "Platform",
+      "Autodesk Construction Cloud: Docs and Design Collaboration"
+     ],
+     [
+      "Done by",
+      "Me, on a trial project, 23 Nov 2026"
+     ],
+     [
+      "Models",
+      "MHH set, ISO 19650 names"
+     ]
+    ]
+   },
+   {
+    "t": "fig",
+    "x": 113.75000000000001,
+    "y": 30,
+    "w": 93.75,
+    "src": "acc_180310.jpg",
+    "caps": [
+     [
+      1,
+      "Revit: Collaborate in the cloud."
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "fig",
+    "x": 212.5,
+    "y": 30,
+    "w": 93.75,
+    "src": "acc_180412.jpg",
+    "caps": [
+     [
+      2,
+      "Save as cloud model into WIP, Architectural, as <span class='mono'>MHH-MEJ-ZZ-ZZ-M3-A-0001</span>."
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "fig",
+    "x": 311.25,
+    "y": 30,
+    "w": 93.75,
+    "src": "acc_182426.jpg",
+    "caps": [
+     [
+      3,
+      "ISO 19650 naming template: Project, Originator, Volume, Level, Type, Role, Number."
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "fig",
+    "x": 113.75000000000001,
+    "y": 112,
+    "w": 93.75,
+    "src": "acc_182525.jpg",
+    "caps": [
+     [
+      4,
+      "Folder permissions on the Architectural WIP folder."
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "fig",
+    "x": 212.5,
+    "y": 112,
+    "w": 93.75,
+    "src": "acc_182607.jpg",
+    "caps": [
+     [
+      5,
+      "Members added with Create permission on their own discipline folder."
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "fig",
+    "x": 311.25,
+    "y": 112,
+    "w": 93.75,
+    "src": "acc_183017.jpg",
+    "caps": [
+     [
+      6,
+      "Design Collaboration discovers three teams: Architectural, Mechanical, Structural."
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "fig",
+    "x": 113.75000000000001,
+    "y": 194,
+    "w": 93.75,
+    "src": "acc_183057.jpg",
+    "caps": [
+     [
+      7,
+      "Coordination space on the Shared folder, with clash detection on."
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "fig",
+    "x": 212.5,
+    "y": 194,
+    "w": 93.75,
+    "src": "acc_183501.jpg",
+    "caps": [
+     [
+      8,
+      "Package Architectural (1) shared for consumption."
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "fig",
+    "x": 311.25,
+    "y": 194,
+    "w": 93.75,
+    "src": "acc_183519.jpg",
+    "caps": [
+     [
+      9,
+      "Project timeline: the package shared with all teams."
+     ]
+    ],
+    "marks": []
+   }
+  ]
+ },
+ "13": {
+  "num": 13,
+  "opener": {
+   "code": "ACL-MEJ-ZZ-ZZ-M3-A-0001",
+   "title": "Aussi Close",
+   "tags": "Residential \u00b7 UK ISO 19650 sheets \u00b7 Rooms and schedules \u00b7 Families \u00b7 Stair and attic",
+   "overview": "A three storey detached house in the UK for client Barr Paul Edeh: open plan living on the ground floor, three bedroom suites on the first, and a guest suite, family lounge and studio in the attic under three dormers. I designed the shell and the main floors. This stage took the model from bare walls to an issued P01 set in UK ISO 19650 style, with 43 rooms, a rebuilt loft stair, three families of my own and 16 sheets.",
+   "facts": [
+    [
+     "Software",
+     "Revit 2027 \u00b7 scripted Revit API routines \u00b7 Mejarc A1 title block"
+    ],
+    [
+     "Location",
+     "United Kingdom. Private residential scheme, portfolio issue S2."
+    ],
+    [
+     "My role",
+     "Designer and BIM technician: rooms and areas, attic design, stair, families, schedules, sheet set"
+    ]
+   ],
+   "figures": [
+    [
+     "43",
+     "rooms, numbered by floor"
+    ],
+    [
+     "718",
+     "m\u00b2 room area"
+    ],
+    [
+     "3",
+     "storeys"
+    ],
+    [
+     "16",
+     "sheets at P01"
+    ],
+    [
+     "3",
+     "families built"
+    ],
+    [
+     "80",
+     "furniture pieces, approx."
+    ]
+   ],
+   "imgs": [
+    "acl_r1.jpg"
+   ],
+   "idx": "02"
+  }
+ },
+ "14": {
+  "num": 14,
+  "hdr_l": "<b>ACL</b>&nbsp;&nbsp;Aussi Close&nbsp;&nbsp;\u00b7&nbsp;&nbsp;Drawing production 1 of 4",
+  "hdr_r": "ACL-MEJ-ZZ-ZZ-M3-A-0001.rvt&nbsp;&nbsp;\u00b7&nbsp;&nbsp;P01&nbsp;&nbsp;\u00b7&nbsp;&nbsp;23 Nov 2026",
+  "items": [
+   {
+    "t": "left",
+    "kicker": "Rooms and areas",
+    "h1": "Room data and schedule of accommodation",
+    "hero": "<span class=\"n\">0</span><span class=\"arr\">\u2192</span><span class=\"n\">43</span>",
+    "herocap": "rooms, numbered by floor, 718 m\u00b2 in total",
+    "qs": [
+     {
+      "title": "What was wrong",
+      "p": "The model held walls and little else: no rooms, one sample sheet, a level named Rool, default view names and 18 warnings. A house without rooms cannot be tagged, scheduled or checked.",
+      "extra": ""
+     },
+     {
+      "title": "What I decided",
+      "p": "Number rooms by floor, 01.xx to 03.xx, from my written layout, and give each a Use value so the schedule groups living, sleeping, sanitary, service and circulation. The attic rooms sit under a slope, so the room computation height went to 1.2 m; at the default the sloped rooms do not enclose.",
+      "extra": ""
+     },
+     {
+      "title": "What changed",
+      "p": "43 rooms with tags on every plan. A double run of the room script made 28 zero area duplicates. I deleted them and wrote every later script to be safe to rerun.",
+      "extra": "<table class=\"own\"><tr><th class=\"\">Level</th><th class=\"r\">Rooms</th><th class=\"r\">m\u00b2</th></tr><tr class=\"\"><td class=\"\">01 Ground Floor</td><td class=\"r\">10</td><td class=\"r\">254</td></tr><tr class=\"\"><td class=\"\">02 First Floor</td><td class=\"r\">18</td><td class=\"r\">247</td></tr><tr class=\"\"><td class=\"\">03 Roof Level, attic</td><td class=\"r\">15</td><td class=\"r\">217</td></tr><tr class=\"t\"><td class=\"\">Total</td><td class=\"r\">43</td><td class=\"r\">718</td></tr></table>"
+     },
+     {
+      "title": "What I would do next",
+      "p": "Report gross internal area to the RICS measuring code alongside room area. Room area leaves out walls and the stair, and a client comparing quotes will ask for GIA.",
+      "extra": ""
+     }
+    ],
+    "role": [
+     [
+      "Model source",
+      "My own design: shell, ground and first floor walls"
+     ],
+     [
+      "My role",
+      "Rooms, attic design, stair, families, schedules and the issued sheet set"
+     ],
+     [
+      "Tools",
+      "Revit 2027, scripted Revit API routines, Mejarc A1 title block"
+     ]
+    ]
+   },
+   {
+    "t": "fig",
+    "x": 113.75000000000001,
+    "y": 30,
+    "w": 192.5,
+    "src": "acl_gf.jpg",
+    "caps": [
+     [
+      1,
+      "01 Ground Floor Plan, 1:50: kitchen, dining, living and TV room off an entrance foyer, with laundry, store and visitors WC behind the stair. <span class='src mono'>ACL-MEJ-ZZ-00-DR-A-1001</span>"
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "fig",
+    "x": 113.75000000000001,
+    "y": 168,
+    "w": 93.75,
+    "src": "acl_ff.jpg",
+    "caps": [
+     [
+      2,
+      "02 First Floor: three bedroom suites. <span class='src mono'>DR-A-1002</span>"
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "fig",
+    "x": 212.50000000000003,
+    "y": 168,
+    "w": 93.75,
+    "src": "acl_at.jpg",
+    "caps": [
+     [
+      3,
+      "03 Attic: guest suite, lounge, studio. <span class='src mono'>DR-A-1003</span>"
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "fig",
+    "x": 311.25000000000006,
+    "y": 30,
+    "w": 93.75,
+    "src": "acl_soac.jpg",
+    "caps": [
+     [
+      4,
+      "Schedule of accommodation grouped by level, with Use and area per room and a subtotal per floor. <span class='src mono'>ACL-MEJ-ZZ-ZZ-SH-A-0002</span>"
+     ]
+    ],
+    "marks": []
+   }
+  ]
+ },
+ "15": {
+  "num": 15,
+  "hdr_l": "<b>ACL</b>&nbsp;&nbsp;Aussi Close&nbsp;&nbsp;\u00b7&nbsp;&nbsp;Drawing production 2 of 4",
+  "hdr_r": "ACL-MEJ-ZZ-ZZ-M3-A-0001.rvt&nbsp;&nbsp;\u00b7&nbsp;&nbsp;P01&nbsp;&nbsp;\u00b7&nbsp;&nbsp;23 Nov 2026",
+  "items": [
+   {
+    "t": "left",
+    "kicker": "Drawing production",
+    "h1": "16 sheet P01 issue to BS EN ISO 19650",
+    "hero": "<span class=\"n\">1</span><span class=\"arr\">\u2192</span><span class=\"n\">16</span>",
+    "herocap": "sheets, each with a container name, a status and a revision that agree",
+    "qs": [
+     {
+      "title": "What was wrong",
+      "p": "One sample sheet with a sample revision on the cover. A set that is meant to read like a real issue needs every sheet to carry a number, a status and a revision that match the register.",
+      "extra": ""
+     },
+     {
+      "title": "What I decided",
+      "p": "Name every sheet to BS EN ISO 19650 with the UK National Annex fields, and number by drawing type so the register sorts itself. One Mejarc A1 title block carries S2, SHARED and Portfolio issue at revision P01. View templates fix plans at 1:50, elevations at 1:100 and sections at 1:50, with crops and datum extents set per view.",
+      "extra": ""
+     },
+     {
+      "title": "What changed",
+      "p": "16 sheets at P01. Five came in a second pass: the foundation plan, three reflected ceiling plans and a 3D perspectives sheet. Their viewports first landed off the sheet because the ceiling plans picked up distant site lines; cropping each to its floor plan's crop fixed it.",
+      "extra": ""
+     },
+     {
+      "title": "What I would do next",
+      "p": "Fix the dates. The title block date field prints 11/23/26 while the revision table on the same sheet says 23/11/2026, and the cover still shows 01/03/26. A UK reader sees a 23rd month. The next issue uses one format, ISO 8601, on every sheet.",
+      "extra": ""
+     }
+    ],
+    "role": [
+     [
+      "Model source",
+      "My own design: shell, ground and first floor walls"
+     ],
+     [
+      "My role",
+      "Rooms, attic design, stair, families, schedules and the issued sheet set"
+     ],
+     [
+      "Tools",
+      "Revit 2027, scripted Revit API routines, Mejarc A1 title block"
+     ]
+    ]
+   },
+   {
+    "t": "fig",
+    "x": 113.75000000000001,
+    "y": 30,
+    "w": 54.25,
+    "src": "sheet_ACL_01.jpg",
+    "caps": [
+     [
+      null,
+      "<span class='mono'>1001</span>&nbsp;&nbsp;Ground floor plan"
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "fig",
+    "x": 173.0,
+    "y": 30,
+    "w": 54.25,
+    "src": "sheet_ACL_02.jpg",
+    "caps": [
+     [
+      null,
+      "<span class='mono'>1002</span>&nbsp;&nbsp;First floor plan"
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "fig",
+    "x": 232.25,
+    "y": 30,
+    "w": 54.25,
+    "src": "sheet_ACL_03.jpg",
+    "caps": [
+     [
+      null,
+      "<span class='mono'>1003</span>&nbsp;&nbsp;Attic floor plan"
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "fig",
+    "x": 291.5,
+    "y": 30,
+    "w": 54.25,
+    "src": "sheet_ACL_09.jpg",
+    "caps": [
+     [
+      null,
+      "<span class='mono'>1000</span>&nbsp;&nbsp;Foundation plan"
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "fig",
+    "x": 350.75,
+    "y": 30,
+    "w": 54.25,
+    "src": "sheet_ACL_10.jpg",
+    "caps": [
+     [
+      null,
+      "<span class='mono'>1103</span>&nbsp;&nbsp;Attic ceiling plan"
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "fig",
+    "x": 113.75000000000001,
+    "y": 77,
+    "w": 54.25,
+    "src": "sheet_ACL_08.jpg",
+    "caps": [
+     [
+      null,
+      "<span class='mono'>2001</span>&nbsp;&nbsp;Elevations"
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "fig",
+    "x": 173.0,
+    "y": 77,
+    "w": 54.25,
+    "src": "sheet_ACL_04.jpg",
+    "caps": [
+     [
+      null,
+      "<span class='mono'>3001</span>&nbsp;&nbsp;Sections AA and CC"
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "fig",
+    "x": 232.25,
+    "y": 77,
+    "w": 54.25,
+    "src": "sheet_ACL_05.jpg",
+    "caps": [
+     [
+      null,
+      "<span class='mono'>SH-0002</span>&nbsp;&nbsp;Accommodation"
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "fig",
+    "x": 291.5,
+    "y": 77,
+    "w": 54.25,
+    "src": "sheet_ACL_07.jpg",
+    "caps": [
+     [
+      null,
+      "<span class='mono'>SH-0001</span>&nbsp;&nbsp;Doors and windows"
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "fig",
+    "x": 350.75,
+    "y": 77,
+    "w": 54.25,
+    "src": "sheet_ACL_11.jpg",
+    "caps": [
+     [
+      null,
+      "<span class='mono'>VS-0001</span>&nbsp;&nbsp;3D perspectives"
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "box",
+    "x": 113.75000000000001,
+    "y": 130,
+    "w": 192.5,
+    "html": "<div class=\"sec\">Drawing register extract, all at S2 \u00b7 P01</div><table class=\"dt\"><tr><th class=\"\">Number, ACL-MEJ-\u2026</th><th class=\"\">Title</th><th class=\"r\">Scale</th></tr><tr class=\"\"><td class=\"\"><span class='mono'>ZZ-ZZ-DR-A-0001</span></td><td class=\"\">Cover and drawing register</td><td class=\"r\"></td></tr><tr class=\"\"><td class=\"\"><span class='mono'>ZZ-00-DR-A-1000</span></td><td class=\"\">Foundation plan</td><td class=\"r\">1:50</td></tr><tr class=\"\"><td class=\"\"><span class='mono'>ZZ-00-DR-A-1001</span></td><td class=\"\">Ground floor plan</td><td class=\"r\">1:50</td></tr><tr class=\"\"><td class=\"\"><span class='mono'>ZZ-01-DR-A-1002</span></td><td class=\"\">First floor plan</td><td class=\"r\">1:50</td></tr><tr class=\"\"><td class=\"\"><span class='mono'>ZZ-02-DR-A-1003</span></td><td class=\"\">Attic floor plan</td><td class=\"r\">1:50</td></tr><tr class=\"\"><td class=\"\"><span class='mono'>ZZ-00-DR-A-1101</span></td><td class=\"\">Ground floor reflected ceiling plan</td><td class=\"r\">1:50</td></tr><tr class=\"\"><td class=\"\"><span class='mono'>ZZ-01-DR-A-1102</span></td><td class=\"\">First floor reflected ceiling plan</td><td class=\"r\">1:50</td></tr><tr class=\"\"><td class=\"\"><span class='mono'>ZZ-02-DR-A-1103</span></td><td class=\"\">Attic reflected ceiling plan</td><td class=\"r\">1:50</td></tr><tr class=\"\"><td class=\"\"><span class='mono'>ZZ-ZZ-DR-A-2001</span></td><td class=\"\">Elevations</td><td class=\"r\">1:100</td></tr><tr class=\"\"><td class=\"\"><span class='mono'>ZZ-ZZ-DR-A-3001</span></td><td class=\"\">Section AA and Section CC Stair</td><td class=\"r\">1:50</td></tr><tr class=\"\"><td class=\"\"><span class='mono'>ZZ-ZZ-SH-A-0001</span></td><td class=\"\">Door and window schedules</td><td class=\"r\"></td></tr><tr class=\"\"><td class=\"\"><span class='mono'>ZZ-ZZ-SH-A-0002</span></td><td class=\"\">Schedule of accommodation</td><td class=\"r\"></td></tr><tr class=\"\"><td class=\"\"><span class='mono'>ZZ-ZZ-VS-A-0001</span></td><td class=\"\">3D perspectives</td><td class=\"r\"></td></tr></table><p class=\"note\" style=\"margin-top:1.5mm\">Also in the set: site plan, roof plan and Section BB.</p>",
+    "cls": ""
+   },
+   {
+    "t": "box",
+    "x": 311.25000000000006,
+    "y": 130,
+    "w": 93.75,
+    "html": "<div class=\"lab\">Reading a sheet number</div><div class=\"id mono\">ACL-MEJ-ZZ-00-DR-A-1001</div><dl style=\"grid-template-columns:12mm 1fr\"><dt class='mono'>ACL</dt><dd>Project</dd><dt class='mono'>MEJ</dt><dd>Originator, Mejarc</dd><dt class='mono'>ZZ</dt><dd>Volume, whole building</dd><dt class='mono'>00</dt><dd>Level: 00, 01, 02, or ZZ for all</dd><dt class='mono'>DR</dt><dd>Type: DR drawing, SH schedule, VS visualisation</dd><dt class='mono'>A</dt><dd>Role, architect</dd><dt class='mono'>1001</dt><dd>Number</dd></dl><div class=\"sec\" style=\"margin-top:4mm\">Number series</div><p style=\"font-size:8pt\">0xxx general, 10xx plans, 11xx ceiling plans, 2xxx elevations, 3xxx sections. The series tells you what a sheet is before you open it.</p>",
+    "cls": "card"
+   }
+  ]
+ },
+ "16": {
+  "num": 16,
+  "hdr_l": "<b>ACL</b>&nbsp;&nbsp;Aussi Close&nbsp;&nbsp;\u00b7&nbsp;&nbsp;Drawing production 3 of 4",
+  "hdr_r": "ACL-MEJ-ZZ-ZZ-M3-A-0001.rvt&nbsp;&nbsp;\u00b7&nbsp;&nbsp;P01&nbsp;&nbsp;\u00b7&nbsp;&nbsp;23 Nov 2026",
+  "items": [
+   {
+    "t": "left",
+    "kicker": "Attic design coordination",
+    "h1": "Loft stair, gable wall and ceiling coordination",
+    "hero": "<span class=\"n\">3.45 m</span>",
+    "herocap": "minimum headroom over the rebuilt loft stair, against 2.0 m in Approved Document K",
+    "qs": [
+     {
+      "title": "What was wrong",
+      "p": "The loft stair arrived against the dormer cheek with no top landing. The gables had no inner leaf above 7050: the external wall type is vertically compound and its blockwork stops just under the attic floor, so the attic walls cleaned back to a face that did not exist and left a 110 mm strip. Nobody had drawn a ceiling or a way into the roof void.",
+      "extra": ""
+     },
+     {
+      "title": "What I decided",
+      "p": "Check before moving anything. Rays cast up from every tread showed the headroom was fine and the landing was the problem, so the flight was rebuilt instead of rerouted: 20 risers at 180 mm, a 250 mm going and winders round a small newel. The gables got a 110 mm inner leaf type from 7050 to the roof. Editing the wall type's layers would be cleaner, but it changes every wall of that type, so I held it back.",
+      "extra": ""
+     },
+     {
+      "title": "What changed",
+      "p": "A 965 mm top landing with a 900 mm guard on the well, gables with a real inner leaf, a flat collar ceiling at 2.7 m with the dormers vaulted, and a 600 by 700 loft hatch into the void. Sections CC and DD document each one.",
+      "extra": ""
+     },
+     {
+      "title": "What I would do next",
+      "p": "Close what is still open. The FD20 door to the stair enclosure was lost in a later edit, the foyer and landing need a fire screen or sprinklers to complete the protected route, and the W trusses must become attic trusses or a cut roof.",
+      "extra": ""
+     }
+    ],
+    "role": [
+     [
+      "Model source",
+      "My own design: shell, ground and first floor walls"
+     ],
+     [
+      "My role",
+      "Rooms, attic design, stair, families, schedules and the issued sheet set"
+     ],
+     [
+      "Tools",
+      "Revit 2027, scripted Revit API routines, Mejarc A1 title block"
+     ]
+    ]
+   },
+   {
+    "t": "fig",
+    "x": 113.75000000000001,
+    "y": 30,
+    "w": 126.66666666666667,
+    "src": "acl_cc.jpg",
+    "caps": [
+     [
+      1,
+      "Section CC Stair: the rebuilt flight with winders, the top landing at 03 Roof Level and the stair dormer that gives the headroom. <span class='src mono'>DR-A-3001</span>"
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "fig",
+    "x": 245.41666666666669,
+    "y": 30,
+    "w": 159.58333333333334,
+    "src": "acl_dd.jpg",
+    "caps": [
+     [
+      2,
+      "Section DD Attic: knee walls under the slope, the collar ceiling at 2.7 m and the roof void above it."
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "fig",
+    "x": 113.75000000000001,
+    "y": 165,
+    "w": 126.66666666666667,
+    "src": "acl_at.jpg",
+    "caps": [
+     [
+      3,
+      "Attic floor plan: guest suite, family lounge and library, studio and gym, eaves stores behind the knee walls. <span class='src mono'>DR-A-1003</span>"
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "fig",
+    "x": 245.41666666666669,
+    "y": 165,
+    "w": 159.58333333333334,
+    "src": "acl_rcp.jpg",
+    "caps": [
+     [
+      4,
+      "Attic reflected ceiling plan: vaulted dormers and the 600 by 700 loft hatch over the corridor outside the guest suite. <span class='src mono'>DR-A-1103</span>"
+     ]
+    ],
+    "marks": []
+   }
+  ]
+ },
+ "17": {
+  "num": 17,
+  "hdr_l": "<b>ACL</b>&nbsp;&nbsp;Aussi Close&nbsp;&nbsp;\u00b7&nbsp;&nbsp;Drawing production 4 of 4",
+  "hdr_r": "ACL-MEJ-ZZ-ZZ-M3-A-0001.rvt&nbsp;&nbsp;\u00b7&nbsp;&nbsp;P01&nbsp;&nbsp;\u00b7&nbsp;&nbsp;23 Nov 2026",
+  "items": [
+   {
+    "t": "left",
+    "kicker": "Families and presentation",
+    "h1": "Parametric families for wardrobes, WCs and the loft hatch",
+    "hero": "<span class=\"n\">3</span>",
+    "herocap": "parametric families built for this house: fitted wardrobe, close coupled WC, loft hatch",
+    "qs": [
+     {
+      "title": "What was wrong",
+      "p": "No residential WC, shower or fitted wardrobe family existed on the machine, so the first issue went out with empty WCs and loose shelving drawn in the walk in closets.",
+      "extra": ""
+     },
+     {
+      "title": "What I decided",
+      "p": "Build them small and parametric. The wardrobe is Casework, with width, depth and height driven by aligned reference planes. The WC is a 400 by 660 close coupled pan. The hatch is a lining and panel set in an opening cut in the collar ceiling. Every instance carries a Comments code, MEJ_FF_03 or MEJ_FF_04, so it can be filtered and scheduled.",
+      "extra": ""
+     },
+     {
+      "title": "What changed",
+      "p": "Six wardrobes replaced the shelving in four walk in closets. Side units in closets 2 and 3 were dropped because a 600 deep unit on that wall blocks the door. Five WCs went in, with Bathrooms 2 and 3 back to back on one soil stack.",
+      "extra": ""
+     },
+     {
+      "title": "What I would do next",
+      "p": "Add a shower tray family so the guest shower room stops borrowing a bath, and set subcategories on all three families so they print at the right line weight.",
+      "extra": ""
+     }
+    ],
+    "role": [
+     [
+      "Model source",
+      "My own design: shell, ground and first floor walls"
+     ],
+     [
+      "My role",
+      "Rooms, attic design, stair, families, schedules and the issued sheet set"
+     ],
+     [
+      "Tools",
+      "Revit 2027, scripted Revit API routines, Mejarc A1 title block"
+     ]
+    ]
+   },
+   {
+    "t": "fig",
+    "x": 113.75000000000001,
+    "y": 30,
+    "w": 159.58333333333334,
+    "src": "acl_ffc.jpg",
+    "caps": [
+     [
+      1,
+      "First floor: wardrobes along walk in closets 2 and 3, and WCs back to back across the partition between Bathrooms 2 and 3. <span class='src mono'>DR-A-1002</span>"
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "box",
+    "x": 278.33333333333337,
+    "y": 30,
+    "w": 126.66666666666667,
+    "html": "<div class=\"lab\">Families built for this project</div><table class=\"dt\"><tr><th class=\"\">Family</th><th class=\"\">What it is</th><th class=\"r\">Placed</th></tr><tr class=\"\"><td class=\"\"><span class='mono'>MEJ_Wardrobe_Fitted</span></td><td class=\"\">Casework. Width, Depth, Height. 2625 and 3600 x 600 x 2100</td><td class=\"r\">6</td></tr><tr class=\"\"><td class=\"\"><span class='mono'>MEJ_WC_CloseCoupled</span></td><td class=\"\">Close coupled pan, 400 x 660</td><td class=\"r\">5</td></tr><tr class=\"\"><td class=\"\"><span class='mono'>MEJ_Loft Hatch 600x700</span></td><td class=\"\">Lining and panel in a collar ceiling opening</td><td class=\"r\">1</td></tr></table><div class=\"sec\" style=\"margin-top:4mm\">Why build, not download</div><p style=\"font-size:8pt\">A downloaded family brings its own materials, subcategories and hidden nested parts. Three small families I can read line by line cost less to check than one I cannot.</p><div class=\"sec\" style=\"margin-top:4mm\">Caught on the way</div><p style=\"font-size:8pt\">Instances placed with a level and an absolute height landed at double the elevation. Later placements pass a zero offset from the level.</p>",
+    "cls": "card"
+   },
+   {
+    "t": "fig",
+    "x": 113.75000000000001,
+    "y": 140,
+    "w": 159.58333333333334,
+    "src": "acl_elev.jpg",
+    "caps": [
+     [
+      2,
+      "The four elevations at 1:100. <span class='src mono'>ACL-MEJ-ZZ-ZZ-DR-A-2001</span>"
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "fig",
+    "x": 278.33333333333337,
+    "y": 140,
+    "w": 126.66666666666667,
+    "src": "acl_3dc.jpg",
+    "caps": [
+     [
+      3,
+      "3D Perspective South West and South East, set to project north. True north is 30 degrees off. <span class='src mono'>VS-A-0001</span>"
+     ]
+    ],
+    "marks": []
+   }
+  ]
+ },
+ "18": {
+  "num": 18,
+  "opener": {
+   "code": "AOB-MEJ-ZZ-ZZ-M3-A-0001",
+   "title": "Aqualand Office Building",
+   "tags": "Commercial office \u00b7 Uniclass 2015 \u00b7 Schedules \u00b7 IFC4 Reference View \u00b7 Model health",
+   "overview": "A four storey office building with a lower ground plant level and roof plant in Austral, New South Wales. I modelled the geometry earlier; this project is about the information inside it. The rooms started with no departments and fifteen wrong names, and the IFC wrote every space as NOTDEFINED. It ends with all 62 rooms classified to Uniclass 2015, schedules on an ISO named sheet, an IFC4 file that passes both a schema check and a property check, and 48 fewer warnings.",
+   "facts": [
+    [
+     "Software",
+     "Revit 2027 \u00b7 BIMcollab Zoom \u00b7 IfcOpenShell 0.9.0 \u00b7 Uniclass 2015 (NBS)"
+    ],
+    [
+     "Location",
+     "Austral, New South Wales, Australia. Portfolio model, not a live commission."
+    ],
+    [
+     "My role",
+     "Designer and information manager: room data, classification, schedules, IFC export and validation, warnings, title block"
+    ]
+   ],
+   "figures": [
+    [
+     "62",
+     "rooms classified"
+    ],
+    [
+     "2,492",
+     "m\u00b2 across 9 levels"
+    ],
+    [
+     "16",
+     "Uniclass codes in use"
+    ],
+    [
+     "0",
+     "IFC schema errors"
+    ],
+    [
+     "133 \u2192 85",
+     "warnings"
+    ],
+    [
+     "41",
+     "doors with a Pr code"
+    ]
+   ],
+   "imgs": [
+    "aob_r17.jpg",
+    "aob_r19.jpg"
+   ],
+   "idx": "03"
+  }
+ },
+ "19": {
+  "num": 19,
+  "hdr_l": "<b>AOB</b>&nbsp;&nbsp;Aqualand Office Building&nbsp;&nbsp;\u00b7&nbsp;&nbsp;Information model 1 of 3",
+  "hdr_r": "AOB-MEJ-ZZ-ZZ-M3-A-0001.rvt&nbsp;&nbsp;\u00b7&nbsp;&nbsp;22 Nov 2026",
+  "items": [
+   {
+    "t": "left",
+    "kicker": "Classification",
+    "h1": "Uniclass 2015 classification of 62 rooms",
+    "hero": "<span class=\"n\">0</span><span class=\"arr\">\u2192</span><span class=\"n\">62</span>",
+    "herocap": "rooms with a Department and a Uniclass SL code, out of 62",
+    "qs": [
+     {
+      "title": "What was wrong",
+      "p": "The room schedule held numbers and nothing else. No room had a department, 15 were named Room or misspelt, the project was still called NSW Office Building with number MEJ-001, and no door type carried a classification.",
+      "extra": ""
+     },
+     {
+      "title": "What I decided",
+      "p": "Four shared parameters in a Classification group: Uniclass SL number and description on rooms, Pr number and description on door types. Rooms renumbered by level, LG.01 to RF.01, renamed and given a department from an agreed table, each matched on its old number and checked against its area before writing. Where Uniclass has no answer I chose and logged one: the verandah takes SL_90_20_91 Terraces, and male and female WCs share SL_35_80_89 because Uniclass does not split by gender.",
+      "extra": ""
+     },
+     {
+      "title": "What changed",
+      "p": "The data now drives the drawings: a department colour scheme fills every room on six plans at 1:200.",
+      "extra": "<table class=\"own\"><tr><th class=\"\">Record</th><th class=\"r\">Before</th><th class=\"r\">After</th></tr><tr class=\"\"><td class=\"\">Rooms with a Department</td><td class=\"r\">0</td><td class=\"r\">62</td></tr><tr class=\"\"><td class=\"\">Rooms with an SL code</td><td class=\"r\">0</td><td class=\"r\">62</td></tr><tr class=\"\"><td class=\"\">Rooms correctly named</td><td class=\"r\">47</td><td class=\"r\">62</td></tr><tr class=\"\"><td class=\"\">Door types with a Pr code</td><td class=\"r\">0</td><td class=\"r\">9</td></tr></table>"
+     },
+     {
+      "title": "What I would do next",
+      "p": "Seven Door Opening types carry no Pr code on purpose, because an opening is not a doorset. I would write that rule into the BEP so the next person does not fill them to make a report look complete.",
+      "extra": ""
+     }
+    ],
+    "role": [
+     [
+      "Model source",
+      "My own geometry, modelled before this exercise"
+     ],
+     [
+      "My role",
+      "Information layer: classification, schedules, IFC export and validation, model health, title block"
+     ],
+     [
+      "Tools",
+      "Revit 2027, BIMcollab Zoom, IfcOpenShell 0.9.0, Uniclass 2015"
+     ]
+    ]
+   },
+   {
+    "t": "fig",
+    "x": 113.75000000000001,
+    "y": 30,
+    "w": 192.5,
+    "src": "aob05.jpg",
+    "caps": [
+     [
+      1,
+      "Room 03.10 in Revit: Department, Uniclass SL number and description in Identity Data, with the department colour plan behind."
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "fig",
+    "x": 311.25000000000006,
+    "y": 30,
+    "w": 93.75,
+    "src": "aob04.jpg",
+    "caps": [
+     [
+      2,
+      "Project parameters: the four Classification.Uniclass fields beside the IFC site and building fields."
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "fig",
+    "x": 113.75000000000001,
+    "y": 147,
+    "w": 143.125,
+    "src": "aob_dpLG.jpg",
+    "caps": [
+     [
+      3,
+      "Department plan LG, plant, 1:200, colour scheme AOB Department."
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "fig",
+    "x": 261.875,
+    "y": 147,
+    "w": 143.125,
+    "src": "aob_dp00.jpg",
+    "caps": [
+     [
+      4,
+      "Department plan 00 Ground, 1:200, colour scheme AOB Department."
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "fig",
+    "x": 113.75000000000001,
+    "y": 210,
+    "w": 143.125,
+    "src": "aob_dp01.jpg",
+    "caps": [
+     [
+      5,
+      "Department plan 01 First, 1:200, colour scheme AOB Department."
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "fig",
+    "x": 261.875,
+    "y": 210,
+    "w": 143.125,
+    "src": "aob_dpRF.jpg",
+    "caps": [
+     [
+      6,
+      "Department plan RF, roof plant, 1:200, colour scheme AOB Department."
+     ]
+    ],
+    "marks": []
+   }
+  ]
+ },
+ "20": {
+  "num": 20,
+  "hdr_l": "<b>AOB</b>&nbsp;&nbsp;Aqualand Office Building&nbsp;&nbsp;\u00b7&nbsp;&nbsp;Information model 2 of 3",
+  "hdr_r": "AOB-MEJ-ZZ-ZZ-M3-A-0001.ifc&nbsp;&nbsp;\u00b7&nbsp;&nbsp;22 Nov 2026",
+  "items": [
+   {
+    "t": "left",
+    "kicker": "IFC export and validation",
+    "h1": "IFC4 export validated for schema and property content",
+    "hero": "<span class=\"n\">62</span><span class=\"n\">/</span><span class=\"n\">62</span>",
+    "herocap": "IfcSpaces carrying a Uniclass reference, a Department and a base quantity area",
+    "qs": [
+     {
+      "title": "What was wrong",
+      "p": "In BIMcollab Zoom, space 03.10 read NOTDEFINED for both Predefined Type and Type Name. No room had an IFC Predefined Type, so Revit wrote one NOTDEFINED space type for all 62. The same check found IfcBuilding still named NSW Office Building, and CSI Uniformat riding along from Assembly Codes on 37 family types.",
+      "extra": ""
+     },
+     {
+      "title": "What I decided",
+      "p": "IFC4 Reference View with base quantities, common property sets, shared coordinates and Uniclass 2015 as the only classification. IFC Predefined Type set on every room from IfcSpaceTypeEnum: 59 INTERNAL and 3 verandahs EXTERNAL, with a new IsExternal parameter so Pset_SpaceCommon reads True on the verandahs. Assembly Codes cleared, building name and address corrected.",
+      "extra": ""
+     },
+     {
+      "title": "What changed",
+      "p": "Zero schema errors and zero EXPRESS rule violations in IfcOpenShell. Space 03.10 now reads INTERNAL, same GUID, same Uniclass code. Every count reconciled with Revit.",
+      "extra": ""
+     },
+     {
+      "title": "What I caught",
+      "p": "The first scripted export used the new parameter mapping. It dropped every property set, leaving Department and area on 0 of 62 spaces, and it still validated with 0 errors. I rejected it and exported again with the classic mapping. A clean schema report proves the file is well formed, nothing more.",
+      "extra": ""
+     }
+    ],
+    "role": [
+     [
+      "Model source",
+      "My own geometry, modelled before this exercise"
+     ],
+     [
+      "My role",
+      "Information layer: classification, schedules, IFC export and validation, model health, title block"
+     ],
+     [
+      "Tools",
+      "Revit 2027, BIMcollab Zoom, IfcOpenShell 0.9.0, Uniclass 2015"
+     ]
+    ]
+   },
+   {
+    "t": "fig",
+    "x": 113.75000000000001,
+    "y": 30,
+    "w": 93.75,
+    "src": "aob07a.jpg",
+    "caps": [
+     [
+      1,
+      "Before: space 03.10 in BIMcollab Zoom, Predefined Type and Type Name NOTDEFINED."
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "fig",
+    "x": 212.50000000000003,
+    "y": 30,
+    "w": 93.75,
+    "src": "aob07.jpg",
+    "caps": [
+     [
+      2,
+      "After: the same space, INTERNAL, same GUID and Uniclass SL_20_15_61."
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "fig",
+    "x": 311.25000000000006,
+    "y": 30,
+    "w": 93.75,
+    "src": "aob27.jpg",
+    "caps": [
+     [
+      3,
+      "Revit schedule AOB_IFC Space Types: verandahs EXTERNAL with IsExternal ticked."
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "box",
+    "x": 113.75000000000001,
+    "y": 152,
+    "w": 159.58333333333334,
+    "html": "<div class=\"sec\">Reconciliation, Revit against IFC</div><table class=\"dt\"><tr><th class=\"\">Check</th><th class=\"r\">Revit</th><th class=\"r\">IFC</th><th class=\"\">Result</th></tr><tr class=\"\"><td class=\"\">Rooms and IfcSpace</td><td class=\"r\">62</td><td class=\"r\">62</td><td class=\"\">Match</td></tr><tr class=\"\"><td class=\"\">Levels and IfcBuildingStorey</td><td class=\"r\">9</td><td class=\"r\">9</td><td class=\"\">Match</td></tr><tr class=\"\"><td class=\"\">Doors and IfcDoor</td><td class=\"r\">45</td><td class=\"r\">41</td><td class=\"\">4 openings export as voids</td></tr><tr class=\"\"><td class=\"\">Stairs and IfcStair</td><td class=\"r\">5</td><td class=\"r\">6</td><td class=\"\">1 stair split by level</td></tr><tr class=\"\"><td class=\"\">Uniclass references</td><td class=\"r\">16</td><td class=\"r\">16</td><td class=\"\">Match</td></tr><tr class=\"\"><td class=\"\">Spaces INTERNAL / EXTERNAL</td><td class=\"r\"></td><td class=\"r\">59 / 3</td><td class=\"\">Match</td></tr></table>",
+    "cls": ""
+   },
+   {
+    "t": "box",
+    "x": 278.33333333333337,
+    "y": 152,
+    "w": 126.66666666666667,
+    "html": "<div class=\"lab\">Export setup AOB_IFC4RV, saved in the model</div><dl><dt>Schema</dt><dd>IFC4, ReferenceView_V1.2</dd><dt>Scope</dt><dd>Whole model, links off</dd><dt>Coordinates</dt><dd>Shared</dd><dt>Data</dt><dd>Base quantities, Revit and IFC common property sets</dd><dt>Classification</dt><dd>Uniclass 2015 from a ClassificationCode parameter</dd><dt>Validation</dt><dd>IfcOpenShell 0.9.0: 0 schema errors, 0 rule violations</dd><dt>Report</dt><dd class=\"mono\">AOB-MEJ-ZZ-ZZ-RP-A-0001</dd></dl>",
+    "cls": "card"
+   }
+  ]
+ },
+ "21": {
+  "num": 21,
+  "hdr_l": "<b>AOB</b>&nbsp;&nbsp;Aqualand Office Building&nbsp;&nbsp;\u00b7&nbsp;&nbsp;Information model 3 of 3",
+  "hdr_r": "AOB-MEJ-ZZ-ZZ-M3-A-0001.rvt&nbsp;&nbsp;\u00b7&nbsp;&nbsp;23 Nov 2026",
+  "items": [
+   {
+    "t": "left",
+    "kicker": "Model health and sheet setup",
+    "h1": "Warning reduction and ISO 19650 title block",
+    "hero": "<span class=\"n\">133</span><span class=\"arr\">\u2192</span><span class=\"n\">85</span>",
+    "herocap": "warnings, with every room area checked before and after",
+    "qs": [
+     {
+      "title": "What was wrong",
+      "p": "133 warnings, 119 of them wall and room separation line overlaps. Section AA showed 130 cyan separation lines and level heads printing on top of each other. The schedule sheet sat on the Autodesk sample title block, with its logo and four empty ISO boxes.",
+      "extra": ""
+     },
+     {
+      "title": "What I decided",
+      "p": "Delete only the 48 separation lines lying on room bounding walls, behind a guard: compare every room area before and after, roll back if any changed by more than 0.05 m\u00b2 or hit zero. A trial on the other 71 zeroed 36 rooms, so it was rolled back and those lines stay. For the sheet, a Mejarc title block whose ISO labels bind to the shared parameters already in the family.",
+      "extra": ""
+     },
+     {
+      "title": "What changed",
+      "p": "85 warnings. The largest area change was room 00.02, 64.985 to 64.959 m\u00b2. The section now reads cleanly, and the sheet carries S2, SHARED, Portfolio issue and revision P01 on a numbering sequence called MEJ Preliminary P.",
+      "extra": ""
+     },
+     {
+      "title": "What I would do next",
+      "p": "Decide the last 71 overlaps wall by wall, then purge the old sample title block. The title block date prints 11/22/26; the next issue uses ISO 8601.",
+      "extra": ""
+     }
+    ],
+    "role": [
+     [
+      "Model source",
+      "My own geometry, modelled before this exercise"
+     ],
+     [
+      "My role",
+      "Information layer: classification, schedules, IFC export and validation, model health, title block"
+     ],
+     [
+      "Tools",
+      "Revit 2027, BIMcollab Zoom, IfcOpenShell 0.9.0, Uniclass 2015"
+     ]
+    ]
+   },
+   {
+    "t": "fig",
+    "x": 113.75000000000001,
+    "y": 30,
+    "w": 93.75,
+    "src": "aob22w.jpg",
+    "caps": [
+     [
+      1,
+      "Section AA before: cyan room separation lines and clashing level heads at Street Level."
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "fig",
+    "x": 212.50000000000003,
+    "y": 30,
+    "w": 93.75,
+    "src": "aob23w.jpg",
+    "caps": [
+     [
+      2,
+      "After: lines hidden in this view, Street Level head staggered with a leader elbow."
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "fig",
+    "x": 311.25000000000006,
+    "y": 30,
+    "w": 44.375,
+    "src": "aob28atb.jpg",
+    "caps": [
+     [
+      3,
+      "Before: Autodesk sample, ISO boxes empty."
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "fig",
+    "x": 360.62500000000006,
+    "y": 30,
+    "w": 44.375,
+    "src": "aob28tb.jpg",
+    "caps": [
+     [
+      4,
+      "After: Mejarc logo, S2 SHARED."
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "fig",
+    "x": 113.75000000000001,
+    "y": 172,
+    "w": 192.5,
+    "src": "aob28w.jpg",
+    "caps": [
+     [
+      5,
+      "Room and door schedules sheet: rooms grouped by level with area subtotals, Uniclass SL code and description; doors by type with Pr code. <span class='src mono'>AOB-MEJ-ZZ-ZZ-SH-A-0001</span>"
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "box",
+    "x": 311.25000000000006,
+    "y": 172,
+    "w": 93.75,
+    "html": "<div class=\"lab\">The 85 that remain, and why</div><table class=\"dt\"><tr><th class=\"\">Warning</th><th class=\"r\">Count</th></tr><tr class=\"\"><td class=\"\">Room separation overlaps, kept</td><td class=\"r\">71</td></tr><tr class=\"\"><td class=\"\">Landing depth</td><td class=\"r\">4</td></tr><tr class=\"\"><td class=\"\">Sub division overlaps</td><td class=\"r\">4</td></tr><tr class=\"\"><td class=\"\">Malformed curtain panels</td><td class=\"r\">3</td></tr><tr class=\"\"><td class=\"\">Stair top, floor overlap, toposolid</td><td class=\"r\">3</td></tr></table><p style=\"font-size:8pt;margin-top:2.5mm\">The 71 overlaps sit on walls that are not room bounding, so the lines are the true boundary. Deleting them would make the warning count look better and the area schedule worse.</p>",
+    "cls": "card"
+   }
+  ]
+ },
+ "22": {
+  "num": 22,
+  "opener": {
+   "code": "PRJC-MEJ-ZZ-ZZ-M3-A-0001",
+   "title": "City Council Offices",
+   "tags": "Civic offices \u00b7 Model audit \u00b7 Cleanup \u00b7 Project information \u00b7 BEP and register",
+   "overview": "A five storey civic office building with a curved glazed front, an entrance plinth and a car park, first drawn as a learning model for a site in Uganda and documented here against a notional UK client. The model was rich in geometry and poor in information: 56 warnings, 521 unused elements, four floor plan DWGs embedded as imports, placeholder project information and no sheets in use. I made it fit to share under ISO 19650, then wrote down the rules that keep it that way.",
+   "facts": [
+    [
+     "Software",
+     "Revit 2027 \u00b7 Python automation bridge (pyRevit and MCP) \u00b7 Navisworks and ACC named in the BEP"
+    ],
+    [
+     "Location",
+     "Design study, notional UK site. First drawn for a site in Uganda."
+    ],
+    [
+     "My role",
+     "Model audit and cleanup, project information, BEP extract, document register"
+    ]
+   ],
+   "figures": [
+    [
+     "56 \u2192 7",
+     "warnings"
+    ],
+    [
+     "609",
+     "unused elements purged"
+    ],
+    [
+     "137 \u2192 59",
+     "loaded families"
+    ],
+    [
+     "4 \u2192 0",
+     "imported DWGs"
+    ],
+    [
+     "11",
+     "false wall attachments removed"
+    ],
+    [
+     "7",
+     "warnings kept, each with a reason"
+    ]
+   ],
+   "imgs": [
+    "prjc_r1.jpg",
+    "prjc_r2.jpg"
+   ],
+   "idx": "04"
+  }
+ },
+ "23": {
+  "num": 23,
+  "hdr_l": "<b>PRJC</b>&nbsp;&nbsp;City Council Offices&nbsp;&nbsp;\u00b7&nbsp;&nbsp;Model health 1 of 3",
+  "hdr_r": "PRJC-MEJ-ZZ-ZZ-M3-A-0001.rvt&nbsp;&nbsp;\u00b7&nbsp;&nbsp;21 Nov 2026",
+  "items": [
+   {
+    "t": "left",
+    "kicker": "Model audit",
+    "h1": "Audit and cleanup of an inherited model",
+    "hero": "<span class=\"n\">609</span>",
+    "herocap": "unused elements purged in three passes: 494, then 60, then 55",
+    "qs": [
+     {
+      "title": "What was wrong",
+      "p": "The model held 327 walls and 139 doors but no rooms, two empty sheets with no title block, four floor plan DWGs imported instead of linked, and project information that still read Project Number and Enter address here. A team receiving it would spend its first day cleaning.",
+      "extra": ""
+     },
+     {
+      "title": "What I decided",
+      "p": "Work on a copy named to the container convention and leave the original untouched. Delete the imported DWGs instead of converting them to links: imports carry their own layers and line styles into the model and can never be updated. Purge until nothing is left, because removing a family frees its materials and patterns for the next pass. Keep the title block type and all 13 view templates for the sheet work.",
+      "extra": ""
+     },
+     {
+      "title": "What changed",
+      "p": "Every change ran as a named Revit transaction, so each step sits separately in the Undo history.",
+      "extra": "<table class=\"own\"><tr><th class=\"\">Check</th><th class=\"r\">Before</th><th class=\"r\">After</th></tr><tr class=\"\"><td class=\"\">Warnings</td><td class=\"r\">56</td><td class=\"r\">7</td></tr><tr class=\"\"><td class=\"\">Purgeable unused elements</td><td class=\"r\">521</td><td class=\"r\">1</td></tr><tr class=\"\"><td class=\"\">Loaded families</td><td class=\"r\">137</td><td class=\"r\">59</td></tr><tr class=\"\"><td class=\"\">Imported DWGs</td><td class=\"r\">4</td><td class=\"r\">0</td></tr><tr class=\"\"><td class=\"\">Placeholder project fields</td><td class=\"r\">3</td><td class=\"r\">0</td></tr><tr class=\"\"><td class=\"\">In place families</td><td class=\"r\">15</td><td class=\"r\">15</td></tr></table>"
+     },
+     {
+      "title": "What I would do next",
+      "p": "Be straight about file size. The original read 29.7 MB, but the working copy opened at 24.2 MB because Save As compacts the file. The purge took it to 23.1 MB. Next time I record size after a compact save, so the cleanup only gets credit for what it did.",
+      "extra": ""
+     }
+    ],
+    "role": [
+     [
+      "Model source",
+      "My own learning model, inherited in a geometry rich, information poor state"
+     ],
+     [
+      "My role",
+      "Audit, cleanup, project information, BEP extract and document register"
+     ],
+     [
+      "Tools",
+      "Revit 2027, named Revit transactions through a Python automation bridge"
+     ]
+    ]
+   },
+   {
+    "t": "fig",
+    "x": 113.75000000000001,
+    "y": 30,
+    "w": 93.75,
+    "src": "prjc_02_purge_before_c.jpg",
+    "caps": [
+     [
+      1,
+      "Purge Unused before: a long tree of unused annotation families and types."
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "fig",
+    "x": 212.50000000000003,
+    "y": 30,
+    "w": 93.75,
+    "src": "prjc_02_purge_after_c.jpg",
+    "caps": [
+     [
+      2,
+      "After three passes: two items left, the empty curtain wall type and a storage schema."
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "fig",
+    "x": 311.25000000000006,
+    "y": 30,
+    "w": 93.75,
+    "src": "prjc_03_imports_before_c.jpg",
+    "caps": [
+     [
+      3,
+      "Imported Categories before: Ground Floor.dwg with every CAD layer in the model."
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "fig",
+    "x": 311.25000000000006,
+    "y": 117,
+    "w": 93.75,
+    "src": "prjc_03_imports_after_c.jpg",
+    "caps": [
+     [
+      4,
+      "After: only Imports in Families remains."
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "fig",
+    "x": 113.75000000000001,
+    "y": 180,
+    "w": 93.75,
+    "src": "prjc_05_filesize_before_c.jpg",
+    "caps": [
+     [
+      5,
+      "Working copy before cleanup, 24.2 MB."
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "fig",
+    "x": 212.50000000000003,
+    "y": 180,
+    "w": 93.75,
+    "src": "prjc_05_filesize_after_c.jpg",
+    "caps": [
+     [
+      6,
+      "After purge and DWG removal, 23.1 MB."
+     ]
+    ],
+    "marks": []
+   }
+  ]
+ },
+ "24": {
+  "num": 24,
+  "hdr_l": "<b>PRJC</b>&nbsp;&nbsp;City Council Offices&nbsp;&nbsp;\u00b7&nbsp;&nbsp;Model health 2 of 3",
+  "hdr_r": "PRJC-MEJ-ZZ-ZZ-M3-A-0001.rvt&nbsp;&nbsp;\u00b7&nbsp;&nbsp;21 Nov 2026",
+  "items": [
+   {
+    "t": "left",
+    "kicker": "Warning resolution",
+    "h1": "Warnings reduced from 56 to 7 with documented exceptions",
+    "hero": "<span class=\"n\">56</span><span class=\"arr\">\u2192</span><span class=\"n\">7</span>",
+    "herocap": "warnings, cut by 87 percent without moving a wall",
+    "qs": [
+     {
+      "title": "What was wrong",
+      "p": "56 warnings. 32 came from quad corner mullions at curtain wall ends that join nothing. 11 walls were attached to the pent slab while their tops were already set by level and offset, so the attachment pointed at a slab they never touched. Three stepped slabs overlapped the ground slab.",
+      "extra": ""
+     },
+     {
+      "title": "What I decided",
+      "p": "Fix the relationship before the geometry. Detach the walls, which moves nothing. Make a rectangular mullion with the same 150 by 150 section and swap the 32 corners to it. The stepped slabs looked like errors, so I confirmed the design intent before touching them: they are entrance plinths at 0, minus 150 and minus 270, so they stay and get joined, plinth cutting. For each duplicate wall I checked what it hosted and kept the one carrying the door.",
+      "extra": ""
+     },
+     {
+      "title": "What changed",
+      "p": "56 to 13 after the walls and mullions, 9 after the plinth joins, 7 after the duplicates. The joins also stop a quantity takeoff counting the overlapping concrete twice.",
+      "extra": ""
+     },
+     {
+      "title": "What I would do next",
+      "p": "Rebuild the 15 in place casework families as loadable families so they can be scheduled and reused. They are the last thing in this model a second team would curse.",
+      "extra": ""
+     }
+    ],
+    "role": [
+     [
+      "Model source",
+      "My own learning model, inherited in a geometry rich, information poor state"
+     ],
+     [
+      "My role",
+      "Audit, cleanup, project information, BEP extract and document register"
+     ],
+     [
+      "Tools",
+      "Revit 2027, named Revit transactions through a Python automation bridge"
+     ]
+    ]
+   },
+   {
+    "t": "fig",
+    "x": 113.75000000000001,
+    "y": 30,
+    "w": 93.75,
+    "src": "prjc_01_warnings_before_c.jpg",
+    "caps": [
+     [
+      1,
+      "Before: the warnings dialog, corner mullion warnings running past 30."
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "fig",
+    "x": 212.50000000000003,
+    "y": 30,
+    "w": 93.75,
+    "src": "prjc_01_warnings_after_c.jpg",
+    "caps": [
+     [
+      2,
+      "After: seven warnings, each one listed below with its reason."
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "box",
+    "x": 311.25000000000006,
+    "y": 30,
+    "w": 93.75,
+    "html": "<div class=\"lab\">Why keep seven</div><p style=\"font-size:8.6pt\">Zero was reachable by deleting things that mattered. Straightening an off axis wall drags every joined wall with it, and changing the ramp changes its gradient, which is a design decision. A justified residue is what a BIM manager wants to read. A clean zero usually hides a deletion.</p><div class=\"sec\" style=\"margin-top:3mm\">Interview story</div><p style=\"font-size:8pt\">The plinth slabs. Asking before changing geometry, and knowing the overlap would have overstated the concrete.</p>",
+    "cls": "card"
+   },
+   {
+    "t": "box",
+    "x": 113.75000000000001,
+    "y": 137,
+    "w": 291.25,
+    "html": "<div class=\"sec\">Warnings by type, with the fix and what is left</div><table class=\"dt\"><tr><th class=\"\">Warning</th><th class=\"r\">Before</th><th class=\"\">Fix</th><th class=\"r\">After</th></tr><tr class=\"\"><td class=\"\">Corner mullion at an unjoined curtain wall end</td><td class=\"r\">32</td><td class=\"\">Swapped to a 150 x 150 rectangular mullion, same section</td><td class=\"r\">0</td></tr><tr class=\"\"><td class=\"\">Wall attached to a slab it misses</td><td class=\"r\">11</td><td class=\"\">Detached; heights already set by level and offset</td><td class=\"r\">0</td></tr><tr class=\"\"><td class=\"\">Floors overlap, stepped ground slabs</td><td class=\"r\">4</td><td class=\"\">Joined, plinth cutting the ground slab</td><td class=\"r\">0</td></tr><tr class=\"\"><td class=\"\">Walls overlap, two duplicates</td><td class=\"r\">2</td><td class=\"\">Deleted the copy, kept the wall hosting the door</td><td class=\"r\">0</td></tr><tr class=\"\"><td class=\"\">Wall or sketch slightly off axis</td><td class=\"r\">3</td><td class=\"\">Flagged for the author</td><td class=\"r\">3</td></tr><tr class=\"\"><td class=\"\">Ramp, toposolid, insert, wall sweep</td><td class=\"r\">4</td><td class=\"\">Kept, each with a written reason</td><td class=\"r\">4</td></tr><tr class=\"t\"><td class=\"\">Total</td><td class=\"r\">56</td><td class=\"\"></td><td class=\"r\">7</td></tr></table>",
+    "cls": ""
+   }
+  ]
+ },
+ "25": {
+  "num": 25,
+  "hdr_l": "<b>PRJC</b>&nbsp;&nbsp;City Council Offices&nbsp;&nbsp;\u00b7&nbsp;&nbsp;Model health 3 of 3",
+  "hdr_r": "PRJC-MEJ-ZZ-ZZ-M3-A-0001.rvt&nbsp;&nbsp;\u00b7&nbsp;&nbsp;21 Nov 2026",
+  "items": [
+   {
+    "t": "left",
+    "kicker": "Information standards",
+    "h1": "Project information, BEP extract and document register",
+    "hero": "<span class=\"n\">3</span><span class=\"arr\">\u2192</span><span class=\"n\">0</span>",
+    "herocap": "placeholder fields in Project Information, replaced by ISO 19650 codes",
+    "qs": [
+     {
+      "title": "What was wrong",
+      "p": "Project information held placeholders: Project Number, Enter address here, Project Status. Nothing in the file said who made it, what state it was in, or what it was called, so every title block and IFC export would have carried blanks.",
+      "extra": ""
+     },
+     {
+      "title": "What I decided",
+      "p": "ISO 19650 sets the codes, not the Revit fields, so I put each code where Revit can pass it on: originator MEJ in Organization, City Council Offices as the building name for IfcBuilding, S0 as the status, PRJC as the project code. Then a BEP extract covering naming, status and revision codes, CDE gates, level of information need and the checks a model passes before it is shared.",
+      "extra": ""
+     },
+     {
+      "title": "What changed",
+      "p": "A register of four containers. The model sits at P01.02 because P01.01 was the state I received; it becomes P01 when shared.",
+      "extra": ""
+     },
+     {
+      "title": "What I would do next",
+      "p": "Two loose ends before the register goes out. The project number still read PRJC 001 at the audit, and codes carry no spaces. Sheet A101 Unnamed holds no views and needs a purpose or deleting.",
+      "extra": ""
+     }
+    ],
+    "role": [
+     [
+      "Model source",
+      "My own learning model, inherited in a geometry rich, information poor state"
+     ],
+     [
+      "My role",
+      "Audit, cleanup, project information, BEP extract and document register"
+     ],
+     [
+      "Tools",
+      "Revit 2027, named Revit transactions through a Python automation bridge"
+     ]
+    ]
+   },
+   {
+    "t": "fig",
+    "x": 113.75000000000001,
+    "y": 30,
+    "w": 93.75,
+    "src": "prjc_04_projinfo_before_c.jpg",
+    "caps": [
+     [
+      1,
+      "Project Information before: identity fields empty."
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "fig",
+    "x": 212.50000000000003,
+    "y": 30,
+    "w": 93.75,
+    "src": "prjc_04_projinfo_after_c.jpg",
+    "caps": [
+     [
+      2,
+      "After: Mejarc as originator, City Council Offices, author named."
+     ]
+    ],
+    "marks": []
+   },
+   {
+    "t": "box",
+    "x": 311.25000000000006,
+    "y": 30,
+    "w": 93.75,
+    "html": "<div class=\"lab\">CDE workflow, BEP section 4</div><table class=\"dt\"><tr><th class=\"\">State</th><th class=\"\">Who</th><th class=\"\">Gate to move on</th></tr><tr class=\"\"><td class=\"\">WIP</td><td class=\"\">Task team</td><td class=\"\">Self check: warnings reviewed, purged, named</td></tr><tr class=\"\"><td class=\"\">Shared</td><td class=\"\">Project team</td><td class=\"\">Task team manager approves, S1 to S4</td></tr><tr class=\"\"><td class=\"\">Published</td><td class=\"\">Client, contractor</td><td class=\"\">Lead appointed party authorises, A code</td></tr><tr class=\"\"><td class=\"\">Archive</td><td class=\"\">All, read only</td><td class=\"\">Superseded, kept for audit</td></tr></table><div class=\"sec\" style=\"margin-top:3mm\">Before a model is shared</div><p style=\"font-size:8pt\">Warnings reviewed and the residue justified in writing. Purged until nothing remains. No imported CAD. No placeholder text. Named to convention with status and revision set.</p>",
+    "cls": "card"
+   },
+   {
+    "t": "box",
+    "x": 113.75000000000001,
+    "y": 133,
+    "w": 192.5,
+    "html": "<div class=\"sec\">Document register</div><table class=\"dt\"><tr><th class=\"\">Container name</th><th class=\"\">Title</th><th class=\"\">Type</th><th class=\"\">Status</th><th class=\"\">Rev</th></tr><tr class=\"\"><td class=\"\"><span class='mono'>PRJC-MEJ-ZZ-ZZ-M3-A-0001</span></td><td class=\"\">Architectural model, cleaned</td><td class=\"\">Model</td><td class=\"\">S0</td><td class=\"\">P01.02</td></tr><tr class=\"\"><td class=\"\"><span class='mono'>PRJC-MEJ-ZZ-ZZ-RP-A-0001</span></td><td class=\"\">Model health audit report</td><td class=\"\">Report</td><td class=\"\">S2</td><td class=\"\">P01</td></tr><tr class=\"\"><td class=\"\"><span class='mono'>PRJC-MEJ-ZZ-ZZ-RP-Z-0001</span></td><td class=\"\">BIM execution plan extract</td><td class=\"\">Report</td><td class=\"\">S2</td><td class=\"\">P01</td></tr><tr class=\"\"><td class=\"\"><span class='mono'>PRJC-MEJ-ZZ-ZZ-DR-A-0001</span></td><td class=\"\">Cover sheet, Revit sheet A100</td><td class=\"\">Drawing</td><td class=\"\">S0</td><td class=\"\">P01.01</td></tr></table>",
+    "cls": ""
+   },
+   {
+    "t": "box",
+    "x": 113.75000000000001,
+    "y": 180,
+    "w": 291.25,
+    "html": "<div class=\"sec\">Level of information need, stage 3 example, BEP section 5</div><table class=\"dt\"><tr><th class=\"\">Element</th><th class=\"\">Geometry</th><th class=\"\">Information</th><th class=\"\">Documentation</th></tr><tr class=\"\"><td class=\"\">Walls</td><td class=\"\">Thickness, height, build up as layers</td><td class=\"\">Type, fire and acoustic rating, Uniclass Ss</td><td class=\"\">Plans, sections, wall types</td></tr><tr class=\"\"><td class=\"\">Floors</td><td class=\"\">Thickness and level, joins resolved</td><td class=\"\">Type, structural or not, Uniclass Ss</td><td class=\"\">Plans, sections</td></tr><tr class=\"\"><td class=\"\">Curtain walls</td><td class=\"\">Grid, mullion and panel types</td><td class=\"\">U value, glazing type</td><td class=\"\">Elevations</td></tr><tr class=\"\"><td class=\"\">Doors</td><td class=\"\">Size and swing, generic leaf</td><td class=\"\">Mark, fire rating, ironmongery set</td><td class=\"\">Door schedule</td></tr><tr class=\"\"><td class=\"\">Ceilings</td><td class=\"\">Height and extent</td><td class=\"\">Type, Uniclass Pr</td><td class=\"\">Reflected ceiling plans</td></tr></table>",
+    "cls": ""
+   }
+  ]
+ }
+}
