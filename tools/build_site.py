@@ -20,7 +20,7 @@ NAME = "Chukwunedum Mejeha"
 EMAIL = "mejehaarc@gmail.com"
 LINKEDIN = "https://www.linkedin.com/in/nedum-mejeha"
 GITHUB = "https://github.com/mej94"
-REPO = "https://github.com/mej94/bim-portfolio"
+REPO = "https://github.com/mej94/BiM_-Portfolio-"
 SITE_URL = "https://chukwunedum-mejeha.vercel.app"
 
 PROJECTS = [

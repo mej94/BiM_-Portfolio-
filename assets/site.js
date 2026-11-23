@@ -307,7 +307,7 @@ if (pal) {
     { t: 'Email Chukwunedum', g: 'Actions', h: 'mailto:mejehaarc@gmail.com' },
     { t: 'Open LinkedIn', g: 'Actions', h: 'https://www.linkedin.com/in/nedum-mejeha', ext: 1 },
     { t: 'Open GitHub', g: 'Actions', h: 'https://github.com/mej94', ext: 1 },
-    { t: 'View the source of this site', g: 'Actions', h: 'https://github.com/mej94/bim-portfolio', ext: 1 },
+    { t: 'View the source of this site', g: 'Actions', h: 'https://github.com/mej94/BiM_-Portfolio-', ext: 1 },
   ];
   fetch('/assets/nav.json').then(r => r.json()).then(n => { items = [...n, ...actions]; }).catch(() => { items = actions; });
   const score = (q, s) => {
@@ -355,5 +355,5 @@ if (pal) {
 }
 
 /* ---------- console signature ---------- */
-console.log('%cChukwunedum Mejeha%c  BIM Technician\nHand built: Python pipeline, vanilla JS, Canvas 2D. Source: https://github.com/mej94/bim-portfolio',
+console.log('%cChukwunedum Mejeha%c  BIM Technician\nHand built: Python pipeline, vanilla JS, Canvas 2D. Source: https://github.com/mej94/BiM_-Portfolio-',
   'font:600 16px IBM Plex Sans,sans-serif;color:#F49424', 'font:14px IBM Plex Sans,sans-serif');

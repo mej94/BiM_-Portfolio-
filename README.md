@@ -1,6 +1,7 @@
 # Chukwunedum Mejeha · BIM Technician portfolio
 
 Live site: https://chukwunedum-mejeha.vercel.app
+Repository: https://github.com/mej94/BiM_-Portfolio-
 
 A hand built static site. No framework, no page builder, no trackers.
 
