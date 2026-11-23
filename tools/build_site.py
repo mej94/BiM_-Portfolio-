@@ -397,9 +397,9 @@ def home():
         f'<td data-p="{PROJECTS[j]["slug"]}">{"<span class=dot></span>" if v else ""}</td>' for j, v in enumerate(r[1:])) + '</tr>' for r in mat)
     mhead = "".join(f'<th scope="col"><a href="/{p["slug"]}/" data-p="{p["slug"]}">{p["code"]}</a></th>' for p in PROJECTS)
     work = [("2024 to date", "BIM Technician", "Mejarc Integrated Services", "Model coordination, information management and drawing production; the four projects on this site."),
-            ("2023 to 2024", "CAD Designer", "Wren Living Ltd", "Drawing production for a residential developer."),
-            ("2020 to 2023", "Architectural Technologist", "Barkwaj Consult Ltd", ""),
-            ("2019 to 2020", "Design Technician", "SENL (Army Engineers)", "")]
+            ("2023 to 2024", "CAD Designer", "Wren Living Ltd", "Planning and building regulations drawings for new homes in AutoCAD: house type layouts, site plans, elevations and revisions from design team comments."),
+            ("2020 to 2023", "Architectural Technologist", "Barkwaj Consult Ltd", "Technical drawing packages for residential and commercial schemes: general arrangements, sections, details and door and window schedules, coordinated with structural and services consultants."),
+            ("2019 to 2020", "Design Technician", "SENL (Army Engineers)", "Drafting and survey support for military engineering works: site layouts, building plans and quantity takeoffs for barracks and infrastructure projects.")]
     wk = "".join(f'<li class="reveal"><span class="yr mono">{y}</span><div><h3>{r}</h3><div class="co">{c}</div>{f"<p>{d}</p>" if d else ""}</div></li>' for y, r, c, d in work)
     cert = ["Autodesk BIM Certificate for Architecture", "Autodesk BIM Certificate for AECO", "Introduction to ISO Global BIM Standards", "NEBOSH Construction"]
     sw = [("Revit 2027", "Modelling, families, schedules, sheets, IFC"), ("Navisworks Manage 2027", "Federation, Clash Detective, viewpoints"),
