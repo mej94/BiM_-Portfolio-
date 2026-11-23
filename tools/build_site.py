@@ -259,7 +259,6 @@ def footer():
   <div>
    <div class="kicker">Built, not templated</div>
    <p class="fbig">Designed and developed by <b>{NAME}</b></p>
-   <p class="fsmall">No framework and no page builder. A Python pipeline reads the same source data as the A3 portfolio PDF, measures each page layout in a headless browser, converts every screenshot to WebP and writes this static site. The hero model is drawn live in Canvas 2D.</p>
    <ul class="chips mono">{chips}</ul>
   </div>
   <div class="fcol">
