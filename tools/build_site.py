@@ -4,11 +4,14 @@ Reads content.json (captured from the A3 PDF build) and boxes.json (element
 geometry measured from the rendered PDF pages), converts the evidence images
 to WebP and writes a plain HTML/CSS/JS site into ../dist.
 """
-import json, os, re, shutil, html, hashlib, datetime
+import json, os, re, shutil, html, hashlib, datetime, sys
 from PIL import Image
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 SITE = os.path.dirname(HERE)
+sys.path.insert(0, HERE)
+import videos  # noqa: E402  workflow videos, see tools/videos.py
+SRC_VIDEO = os.environ.get('PORTFOLIO_VIDEO', os.path.join(SITE, 'video'))
 SRC_IMG = os.environ.get('PORTFOLIO_IMG', os.path.join(SITE, '..', 'spread', 'img'))
 DIST = os.path.join(SITE, 'dist')
 ASSETS = os.path.join(SITE, 'assets')
@@ -334,6 +337,7 @@ def sheet_html(num, idx, total):
     <h2>{L['h1']}</h2>
     <div class="hero">{count_spans(L['hero'])}</div>
     <div class="herocap">{L['herocap']}</div>
+    {videos.sheet_link(num)}
     <div class="qs">{qs}</div>
     {f'<dl class="role">{role}</dl>' if role else ''}
    </aside>
@@ -357,8 +361,11 @@ def project_page(k):
  <a href="/{prv['slug']}/" class="pn-a"><span class="mono">← Project {prv['num']}</span><b>{pn(prv)}</b></a>
  <a href="/{nxt['slug']}/" class="pn-a r"><span class="mono">Project {nxt['num']} →</span><b>{pn(nxt)}</b></a>
 </nav>"""
+    vsec = videos.section_html(p['slug'])
+    if vsec:
+        tocs = videos.toc_link() + tocs
     body = (opener_html(p) + f'<div class="toc" data-toc><div class="wrap toc-in"><span class="mono toc-l">{p["code"]}</span>{tocs}</div></div>'
-            + secs + nav)
+            + vsec + secs + nav)
     title = f"{o['title']} · {NAME}, BIM Technician"
     page = head(title, strip(o['overview'])[:155], f"/{p['slug']}/") + body + footer()
     return page, toc
@@ -373,7 +380,7 @@ def home():
         figs = "".join(f'<div><b>{v}</b><span>{l}</span></div>' for v, l in o['figures'][:3])
         tags = "".join(f'<li>{t.strip()}</li>' for t in o['tags'].split('·')[:4])
         cards += f"""<a class="pc reveal" href="/{p['slug']}/">
- <div class="pc-img"><img src="/img/{f}" width="{w}" height="{h}" alt="{o['title']} render" loading="lazy"><span class="pc-code mono">{o['code']}</span></div>
+ <div class="pc-img"><img src="/img/{f}" width="{w}" height="{h}" alt="{o['title']} render" loading="lazy">{videos.card_badge(p['slug'])}<span class="pc-code mono">{o['code']}</span></div>
  <div class="pc-txt">
   <div class="pc-k mono"><span>{p['num']} · {p['code']}</span><span>{p['where']}</span></div>
   <h3>{o['title']}</h3>
@@ -505,6 +512,8 @@ if __name__ == '__main__':
         pages[f"{p['slug']}/index.html"] = pg
         o = C[str(p['opener'])]['opener']
         palette.append(dict(t=f"{o['title']}", h=f"/{p['slug']}/", g="Projects", s=p['code']))
+        if videos.VIDEOS.get(p['slug']):
+            palette.append(dict(t=videos.TOC_LABEL, h=f"/{p['slug']}/#{videos.SECTION_ID}", g=o['title'], s=p['code']))
         for sid, kick in toc:
             palette.append(dict(t=f"{kick}", h=f"/{p['slug']}/#{sid}", g=o['title'], s=p['code']))
     for sec in ["projects", "about", "skills", "experience", "contact"]:
@@ -520,6 +529,8 @@ if __name__ == '__main__':
         h = h.replace('{PAGES}', str(len(pages))).replace('{IMGS}', str(nimg))
         open(fp, 'w').write(h)
     shutil.copytree(ASSETS, os.path.join(DIST, 'assets'))
+    if os.path.isdir(SRC_VIDEO):
+        shutil.copytree(SRC_VIDEO, os.path.join(DIST, 'video'))
     json.dump(palette, open(os.path.join(DIST, 'assets', 'nav.json'), 'w'))
     for f in ['favicon.svg', 'vercel.json', '404.html', 'robots.txt']:
         if os.path.exists(os.path.join(SITE, 'static', f)):
