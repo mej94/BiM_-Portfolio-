@@ -355,11 +355,51 @@ body.light-top .nav:not(.solid){color:var(--fg)}
 /* reveal */
 .js .reveal{opacity:0;transform:translateY(24px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
 .js .reveal.in{opacity:1;transform:none}
+/* workflow videos */
+.vids-h{max-width:760px;margin-bottom:32px}
+.vids-h h2{font-size:clamp(26px,2.6vw,36px);line-height:1.12;letter-spacing:-.015em;font-weight:600;margin:10px 0 14px}
+.vids-h p{color:var(--grey);font-size:17px}
+.vids-g{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,2.4vw,32px)}
+.vc{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);min-width:0;transition:border-color .3s,box-shadow .5s}
+.vc:hover,.vc.playing{border-color:var(--accent);box-shadow:0 30px 60px -34px rgba(0,0,0,.35)}
+.vc:target{border-color:var(--accent)}
+.vc-media{position:relative;background:#111;aspect-ratio:1280/686;line-height:0}
+.vc-media video{width:100%;height:100%;display:block;object-fit:contain;background:#111}
+.vc-play{position:absolute;inset:0;display:grid;place-items:center;background:linear-gradient(180deg,rgba(17,18,20,0) 40%,rgba(17,18,20,.55));transition:opacity .3s var(--ease)}
+.vc-btn{width:72px;height:72px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 8px rgba(244,148,36,.25);position:relative;transition:transform .35s var(--ease),box-shadow .35s}
+.vc-btn::after{content:"";position:absolute;left:29px;top:22px;border-style:solid;border-width:14px 0 14px 22px;border-color:transparent transparent transparent #fff}
+.vc-play:hover .vc-btn,.vc-play:focus-visible .vc-btn{transform:scale(1.08);box-shadow:0 0 0 14px rgba(244,148,36,.22)}
+.vc-dur{position:absolute;right:12px;bottom:12px;background:rgba(22,23,26,.85);color:#F2F1ED;font-size:12px;line-height:1;padding:6px 9px}
+.vc.started .vc-play{opacity:0;pointer-events:none}
+.vc-body{padding:22px 24px 24px;display:flex;flex-direction:column;flex:1}
+.vc-k{display:flex;justify-content:space-between;gap:12px;font-size:12px;color:var(--grey);border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:14px}
+.vc-k span:first-child{color:var(--accent-ink);font-weight:600}
+.vc h3{font-size:20px;line-height:1.25;font-weight:600;letter-spacing:-.01em;margin-bottom:10px}
+.vc-body>p{font-size:15px;line-height:1.55}
+.vc-chl{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--grey);margin:18px 0 6px}
+.vc-chs{list-style:none;border-top:1px solid var(--line)}
+.vc-chs li{border-bottom:1px solid var(--line)}
+.vc-ch{display:flex;gap:14px;width:100%;text-align:left;font-size:14px;padding:9px 4px;transition:background .2s,color .2s}
+.vc-ch span{flex:none;width:36px;color:var(--grey);font-size:12px;padding-top:2px}
+.vc-ch:hover{background:var(--mat)}
+.vc-ch.on{color:var(--accent-ink);font-weight:600}
+.vc-ch.on span{color:var(--accent-ink)}
+.vc-tags{list-style:none;display:flex;flex-wrap:wrap;gap:6px;margin:18px 0 0;font-size:11px}
+.vc-tags li{border:1px solid var(--line);padding:3px 8px;color:var(--grey)}
+.vc-see{margin-top:auto;padding-top:18px;font-size:13px;color:var(--accent-ink);text-decoration:none;align-self:flex-start}
+.vc-see i{font-style:normal;display:inline-block;transition:transform .25s var(--ease)}
+.vc-see:hover i{transform:translateX(4px)}
+.watch{display:inline-flex;align-items:center;gap:8px;margin:0 0 18px;font-size:12px;text-decoration:none;color:var(--accent-ink);border:1px solid var(--accent);padding:7px 12px;transition:background .2s,color .2s}
+.watch:hover{background:var(--accent);color:#111}
+.pc-vid{position:absolute;left:16px;top:16px;background:var(--accent);color:#111;font-size:11px;font-weight:600;padding:5px 9px;letter-spacing:.02em;z-index:1}
+@media (max-width:980px){.vids-g{grid-template-columns:1fr}}
+@media (max-width:560px){.vc-body{padding:18px 16px 20px}.vc-btn{width:60px;height:60px}.vc-btn::after{left:24px;top:18px;border-width:12px 0 12px 19px}.vc-k span:last-child{display:none}}
+
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .js .reveal{opacity:1;transform:none;transition:none}
   .mk,.cursor{animation:none}
   .op-media img{transition:opacity .3s}
 }
-@media print{.nav,.progress,.toc,.foot,#bim{display:none}}
+@media print{.nav,.progress,.toc,.foot,#bim,.vc-play{display:none}}
 .dt td .mono{white-space:nowrap}

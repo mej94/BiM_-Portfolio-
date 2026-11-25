@@ -354,6 +354,30 @@ if (pal) {
   });
 }
 
+/* ---------- workflow videos ---------- */
+const vcs = $$('.vc');
+vcs.forEach(card => {
+  const v = $('video', card), chs = $$('.vc-ch', card), ts = chs.map(b => +b.dataset.t);
+  v.controls = false; // overlay button first, native controls once playback starts
+  const play = () => { card.classList.add('started'); v.controls = true; v.play().catch(() => {}); };
+  $('.vc-play', card).addEventListener('click', play);
+  chs.forEach(b => b.addEventListener('click', () => {
+    const go = () => { v.currentTime = +b.dataset.t; play(); };
+    if (v.readyState >= 1) go();
+    else { v.preload = 'metadata'; v.addEventListener('loadedmetadata', go, { once: true }); v.load(); }
+  }));
+  v.addEventListener('play', () => {
+    card.classList.add('started', 'playing'); v.controls = true;
+    vcs.forEach(o => { if (o !== card) { const ov = $('video', o); if (!ov.paused) ov.pause(); } });
+  });
+  v.addEventListener('pause', () => card.classList.remove('playing'));
+  v.addEventListener('timeupdate', () => {
+    let k = 0;
+    ts.forEach((t, i) => { if (v.currentTime >= t) k = i; });
+    chs.forEach((b, i) => b.classList.toggle('on', i === k));
+  });
+});
+
 /* ---------- console signature ---------- */
 console.log('%cChukwunedum Mejeha%c  BIM Technician\nHand built: Python pipeline, vanilla JS, Canvas 2D. Source: https://github.com/mej94/BiM_-Portfolio-',
   'font:600 16px IBM Plex Sans,sans-serif;color:#F49424', 'font:14px IBM Plex Sans,sans-serif');
