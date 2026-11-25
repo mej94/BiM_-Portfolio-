@@ -220,7 +220,12 @@ if (toc) {
   const spy = new IntersectionObserver(es => es.forEach(e => {
     if (!e.isIntersecting) return;
     links.forEach(l => l.classList.remove('on'));
-    const a = map.get(e.target.id); if (a) { a.classList.add('on'); a.scrollIntoView({ block: 'nearest', inline: 'center', behavior: reduce ? 'auto' : 'smooth' }); }
+    const a = map.get(e.target.id); if (!a) return;
+    a.classList.add('on');
+    // Centre the active link by scrolling the bar itself. scrollIntoView also scrolls the
+    // window, which fought the reader's own scrolling and swallowed section link clicks.
+    const bar = a.parentElement;
+    bar.scrollTo({ left: a.offsetLeft - bar.offsetLeft - (bar.clientWidth - a.offsetWidth) / 2, behavior: reduce ? 'auto' : 'smooth' });
   }), { rootMargin: '-45% 0px -50% 0px' });
   $$('.sheet').forEach(s => spy.observe(s));
 }
