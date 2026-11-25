@@ -217,17 +217,26 @@ $$('[data-copy]').forEach(b => b.addEventListener('click', async () => {
 const toc = $('[data-toc]');
 if (toc) {
   const links = $$('a', toc), map = new Map(links.map(a => [a.getAttribute('href').slice(1), a]));
-  const spy = new IntersectionObserver(es => es.forEach(e => {
-    if (!e.isIntersecting) return;
+  const activate = a => {
+    if (!a || a.classList.contains('on')) return;
     links.forEach(l => l.classList.remove('on'));
-    const a = map.get(e.target.id); if (!a) return;
     a.classList.add('on');
     // Centre the active link by scrolling the bar itself. scrollIntoView also scrolls the
     // window, which fought the reader's own scrolling and swallowed section link clicks.
     const bar = a.parentElement;
     bar.scrollTo({ left: a.offsetLeft - bar.offsetLeft - (bar.clientWidth - a.offsetWidth) / 2, behavior: reduce ? 'auto' : 'smooth' });
+  };
+  const atEnd = () => innerHeight + scrollY >= document.documentElement.scrollHeight - 8;
+  const spy = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting && !atEnd()) activate(map.get(e.target.id));
   }), { rootMargin: '-45% 0px -50% 0px' });
   $$('.sheet').forEach(s => spy.observe(s));
+  // A short last section never reaches the middle band, so light it up at the page end.
+  let tick = 0;
+  addEventListener('scroll', () => {
+    if (tick) return;
+    tick = requestAnimationFrame(() => { tick = 0; if (atEnd()) activate(links[links.length - 1]); });
+  }, { passive: true });
 }
 
 /* ---------- before / after sliders ---------- */
